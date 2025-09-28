@@ -16,22 +16,30 @@
 		0 2px 6px rgba(var(--gray), 25%), 0 8px 24px rgba(var(--gray), 33%), 0 16px 32px
 		rgba(var(--gray), 33%);
 }
+/* Ubuntu Font Family */
 @font-face {
-	font-family: "Atkinson";
-	src: url("/fonts/atkinson-regular.woff") format("woff");
-	font-weight: 400;
-	font-style: normal;
-	font-display: swap;
+  font-family: 'Ubuntu';
+  src: url('./fonts/Ubuntu-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
 }
+
+/* Rokkitt Variable Font */
 @font-face {
-	font-family: "Atkinson";
-	src: url("/fonts/atkinson-bold.woff") format("woff");
-	font-weight: 700;
-	font-style: normal;
-	font-display: swap;
+  font-family: 'Rokkitt';
+  src: url('./fonts/Rokkitt-VariableFont_wght.ttf') format('truetype');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
 }
+
+html, body { height: 100%; margin: 0; }
+/* Set Ubuntu as the default font */
 body {
-	font-family: "Atkinson", sans-serif;
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
 	margin: 0;
 	padding: 0;
 	text-align: left;
@@ -40,8 +48,8 @@ body {
 	word-wrap: break-word;
 	overflow-wrap: break-word;
 	color: rgb(var(--gray-dark));
-	font-size: 20px;
 	line-height: 1.7;
+	display: flex; flex-direction: column;
 }
 main {
 	width: 720px;
@@ -55,15 +63,13 @@ h3,
 h4,
 h5,
 h6 {
-	margin: 0 0 0.5rem 0;
-	color: rgb(var(--black));
-	line-height: 1.2;
+	font-family: 'Rokkitt', serif; font-weight: 500; margin: 0 0 0.5rem 0;	color: rgb(var(--black));	line-height: 1.2;
 }
 h1 {
-	font-size: 3.052em;
+	font-size: 2.52em;
 }
 h2 {
-	font-size: 2.441em;
+	font-size: 2.241em;
 }
 h3 {
 	font-size: 1.953em;

@@ -2,8 +2,8 @@
 const today = new Date();
 ---
 
-<footer>
-	&copy; {today.getFullYear()} Your name here. All rights reserved.
+<!-- <footer>
+	&copy; {today.getFullYear()}  StackInsight.dev. All rights reserved.
 	<div class="social-links">
 		<a href="https://m.webtoo.ls/@astro" target="_blank">
 			<span class="sr-only">Follow Astro on Mastodon</span>
@@ -38,25 +38,39 @@ const today = new Date();
 			>
 		</a>
 	</div>
+</footer> -->
+<footer>
+	<div class="footer_content">
+		<div class="footer_logo"><img src="stackinsight.dev-logo.png" alt=" Stack Insight"></div>
+		<div class="group">
+			<nav>
+				<a href="/about">About</a>
+				<a href="/contact">Contact</a>
+				<a href="/privacy-policy">Privacy Policy</a>
+			</nav>
+			<div class="footer_copyright"><span>&copy; {today.getFullYear()} StackInsight.dev.</span> <span>All rights reserved.</span></div>
+		</div>
+	</div>
 </footer>
-<style>
-	footer {
-		padding: 2em 1em 6em 1em;
-		background: linear-gradient(var(--gray-gradient)) no-repeat;
-		color: rgb(var(--gray));
-		text-align: center;
-	}
-	.social-links {
-		display: flex;
-		justify-content: center;
-		gap: 1em;
-		margin-top: 1em;
-	}
-	.social-links a {
-		text-decoration: none;
-		color: rgb(var(--gray));
-	}
-	.social-links a:hover {
-		color: rgb(var(--gray-dark));
-	}
+<style lang="scss">
+footer { background-color: #f8f9fa; box-shadow: 0 -2px 4px rgba(0,0,0,0.1);
+  .footer_content { display: flex; justify-content: space-between; align-items: center; 
+    padding: 20px; max-width: 1000px; margin: 0 auto;
+    .footer_logo {
+      img { width: 150px; height: auto; display: block; }
+    }
+    .group {
+      display: flex; gap: 10px; flex-direction: column;
+      nav {
+        display: flex; gap: 2rem;
+        a { text-decoration: none; color: #6c757d; cursor: pointer; font-size: 0.8em;
+          &:hover { text-decoration: underline; }
+        }
+      }
+      .footer_copyright { font-size: 0.8em; color: #6c757d; display: flex; gap: 1em;
+        @media (max-width: 786px) {display: flex; flex-direction: column; gap: 0; }
+      }
+    }
+  }
+}
 </style>

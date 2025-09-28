@@ -5,12 +5,13 @@ import HeaderLink from './HeaderLink.astro';
 
 <header>
 	<nav>
-		<h2><a href="/">{SITE_TITLE}</a></h2>
+		<h2><a class="logo" href="/"><img src="stackinsight.dev-logo.png" alt="Stack Insight Logo" /></a></h2>
 		<div class="internal-links">
 			<HeaderLink href="/">Home</HeaderLink>
 			<HeaderLink href="/blog">Blog</HeaderLink>
 			<HeaderLink href="/about">About</HeaderLink>
 		</div>
+		<!-- 
 		<div class="social-links">
 			<a href="https://m.webtoo.ls/@astro" target="_blank">
 				<span class="sr-only">Follow Astro on Mastodon</span>
@@ -40,38 +41,20 @@ import HeaderLink from './HeaderLink.astro';
 				>
 			</a>
 		</div>
+		-->
 	</nav>
 </header>
-<style>
-	header {
-		margin: 0;
-		padding: 0 1em;
-		background: white;
-		box-shadow: 0 2px 8px rgba(var(--black), 5%);
-	}
-	h2 {
-		margin: 0;
-		font-size: 1em;
-	}
-
-	h2 a,
-	h2 a.active {
-		text-decoration: none;
-	}
-	nav {
-		display: flex;
-		align-items: center;
-		justify-content: space-between;
-	}
-	nav a {
-		padding: 1em 0.5em;
-		color: var(--black);
-		border-bottom: 4px solid transparent;
-		text-decoration: none;
-	}
-	nav a.active {
-		text-decoration: none;
-		border-bottom-color: var(--accent);
+<style lang="scss">
+	header { background-color: #f8f9fa; box-shadow: 0 2px 8px rgba(var(--black), 5%);
+		nav { display: flex; justify-content: space-between; align-items: center; max-width: 1000px;
+			padding: 20px; margin: 0 auto; }
+		.logo { margin: 0; cursor: pointer; 
+			img { width: 150px; height: auto; display: block; }
+		}
+		a { margin-right: 1rem; text-decoration: none; color: #333; cursor: pointer;
+			&:hover { text-decoration: underline; }
+		}
+		a.active { border-bottom-color: var(--accent);	}
 	}
 	.social-links,
 	.social-links a {

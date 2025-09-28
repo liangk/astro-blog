@@ -45,5 +45,12 @@ import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
 			</p>
 		</main>
 		<Footer />
+		<!-- For the reactive form to work with Netlify, you also need to create a hidden HTML form
+		Create this in your index.html or as a separate component: -->
+		<form name="contact-reactive" netlify-honeypot="bot-field" hidden>
+			<input type="text" name="name" />
+			<input type="email" name="email" />
+			<textarea name="message"></textarea>
+		</form>
 	</body>
 </html>
