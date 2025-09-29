@@ -3,6 +3,7 @@ title: "How to Build a Free Crypto Tracker Dashboard with React in 2025"
 description: "Complete guide to building your own free cryptocurrency tracker dashboard using React. Learn real-time price tracking, CoinGecko API integration, and free hosting strategies. Live demo included."
 keywords: "free crypto tracker, build cryptocurrency dashboard, react crypto portfolio, crypto price tracker, cryptocurrency portfolio tracker, react crypto dashboard, CoinGecko API, crypto app tutorial, free crypto portfolio, real-time crypto prices"
 pubDate: "2025-09-17"
+heroImage: '../../assets/crypto-tracker-article-s1.jpg'
 author: "Ko-Hsin Liang"
 categories: ["React", "Cryptocurrency", "Web Development", "API Integration"]
 tags: ["crypto tracker", "React", "CoinGecko API", "free hosting", "real-time data", "Chart.js"]

@@ -13,37 +13,133 @@ import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
 	<body>
 		<Header />
 		<main>
-			<h1>🧑‍🚀 Hello, Astronaut!</h1>
-			<p>
-				Welcome to the official <a href="https://astro.build/">Astro</a> blog starter template. This
-				template serves as a lightweight, minimally-styled starting point for anyone looking to build
-				a personal website, blog, or portfolio with Astro.
-			</p>
-			<p>
-				This template comes with a few integrations already configured in your
-				<code>astro.config.mjs</code> file. You can customize your setup with
-				<a href="https://astro.build/integrations">Astro Integrations</a> to add tools like Tailwind,
-				React, or Vue to your project.
-			</p>
-			<p>Here are a few ideas on how to get started with the template:</p>
-			<ul>
-				<li>Edit this page in <code>src/pages/index.astro</code></li>
-				<li>Edit the site header items in <code>src/components/Header.astro</code></li>
-				<li>Add your name to the footer in <code>src/components/Footer.astro</code></li>
-				<li>Check out the included blog posts in <code>src/content/blog/</code></li>
-				<li>Customize the blog post page layout in <code>src/layouts/BlogPost.astro</code></li>
-			</ul>
-			<p>
-				Have fun! If you get stuck, remember to
-				<a href="https://docs.astro.build/">read the docs</a>
-				or <a href="https://astro.build/chat">join us on Discord</a> to ask questions.
-			</p>
-			<p>
-				Looking for a blog template with a bit more personality? Check out
-				<a href="https://github.com/Charca/astro-blog-template">astro-blog-template</a>
-				by <a href="https://twitter.com/Charca">Maxi Ferreira</a>.
-			</p>
+			<h1>Modern Web Development Insights</h1>
+			<div class="hero-section">
+				<p class="tagline">
+					Expert tutorials, in-depth analyses, and practical guides for today's web developers
+				</p>
+			</div>
+
+			<section class="introduction">
+				<p>
+					Welcome to <strong>StackInsight.dev</strong>, where we decode complex web development concepts into 
+					actionable insights. Our mission is to help developers build modern, performant, and secure applications 
+					through detailed tutorials, case studies, and best practices.
+				</p>
+				
+				<p>
+					Whether you're looking to master authentication patterns, optimize React applications, or explore 
+					the latest frontend frameworks, our practical guides provide the technical depth you need to 
+					implement solutions with confidence.
+				</p>
+			</section>
+
+			<section class="content-highlights">
+				<h2>What You'll Find Here</h2>
+				<div class="highlights-grid">
+					<div class="highlight-item">
+						<h3>📊 Technical Deep Dives</h3>
+						<p>Thorough explorations of web technologies that go beyond the basics to address real-world challenges.</p>
+					</div>
+					<div class="highlight-item">
+						<h3>🔧 Implementation Guides</h3>
+						<p>Step-by-step tutorials with complete code examples that you can adapt to your own projects.</p>
+					</div>
+					<div class="highlight-item">
+						<h3>⚡ Performance Insights</h3>
+						<p>Optimization techniques to ensure your applications remain fast, responsive, and efficient.</p>
+					</div>
+					<div class="highlight-item">
+						<h3>🔒 Security Best Practices</h3>
+						<p>Modern approaches to keeping your applications and user data secure in an evolving threat landscape.</p>
+					</div>
+				</div>
+			</section>
+
+			<section class="cta">
+				<h2>Start Exploring</h2>
+				<p>
+					Browse our latest articles or dive into specific topics through our categorized content. 
+					Each post is crafted to provide actionable insights that you can immediately apply to your work.
+				</p>
+				<div class="cta-buttons">
+					<a href="/blog" class="button primary">Read Latest Articles</a>
+				</div>
+			</section>
 		</main>
+
+		<style>
+			.hero-section {
+				margin-bottom: 3rem;
+			}
+			
+			.tagline {
+				font-size: 1.5em;
+				color: #555;
+				line-height: 1.4;
+			}
+			
+			section {
+				margin: 3rem 0;
+			}
+			
+			.highlights-grid {
+				display: grid;
+				grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+				gap: 2rem;
+				margin: 2rem 0;
+			}
+			
+			.highlight-item {
+				padding: 1.5rem;
+				background: #f9f9f9;
+				border-radius: 8px;
+				box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+			}
+			
+			.highlight-item h3 {
+				margin-top: 0;
+				font-size: 1.3em;
+			}
+			
+			.cta {
+				text-align: center;
+				padding: 2rem;
+				background: #f5f5f5;
+				border-radius: 8px;
+				margin: 3rem 0 1rem;
+			}
+			
+			.cta-buttons {
+				margin-top: 1.5rem;
+			}
+			
+			.button {
+				display: inline-block;
+				padding: 0.8rem 1.5rem;
+				border-radius: 4px;
+				text-decoration: none;
+				font-weight: 500;
+				transition: all 0.2s ease;
+			}
+			
+			.button.primary {
+				background: var(--accent);
+				color: white;
+			}
+			
+			.button.primary:hover {
+				background: var(--accent-dark);
+				transform: translateY(-2px);
+				box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+			}
+			
+			@media (max-width: 768px) {
+				.highlights-grid {
+					grid-template-columns: 1fr;
+				}
+			}
+		</style>
 		<Footer />
 		<!-- For the reactive form to work with Netlify, you also need to create a hidden HTML form
 		Create this in your index.html or as a separate component: -->
