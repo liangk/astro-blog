@@ -1,7 +1,7 @@
 {
-  "name": "Stack Insight",
-  "short_name": "StackInsight",
-  "description": "Modern Web Development Insights & Tutorials",
+  "name": "Ko-Hsin Liang's Blog",
+  "short_name": "KHBlog",
+  "description": "Modern Web Development Insights & Tutorials by Ko-Hsin Liang",
   "icons": [
     {
       "src": "/android-chrome-192x192.png",

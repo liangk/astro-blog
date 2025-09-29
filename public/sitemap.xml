@@ -5,7 +5,7 @@
   <!-- Homepage -->
   <url>
     <loc>https://stackinsight.dev/</loc>
-    <lastmod>2025-09-27</lastmod>
+    <lastmod>2025-09-29</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -13,7 +13,7 @@
   <!-- Blog -->
   <url>
     <loc>https://stackinsight.dev/blog</loc>
-    <lastmod>2025-09-27</lastmod>
+    <lastmod>2025-09-29</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
@@ -21,7 +21,7 @@
   <!-- About -->
   <url>
     <loc>https://stackinsight.dev/about</loc>
-    <lastmod>2025-09-27</lastmod>
+    <lastmod>2025-09-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -29,7 +29,7 @@
   <!-- Contact -->
   <url>
     <loc>https://stackinsight.dev/contact</loc>
-    <lastmod>2025-09-27</lastmod>
+    <lastmod>2025-09-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -37,7 +37,7 @@
   <!-- Privacy Policy -->
   <url>
     <loc>https://stackinsight.dev/privacy-policy</loc>
-    <lastmod>2025-09-27</lastmod>
+    <lastmod>2025-09-29</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -45,13 +45,13 @@
   <!-- Blog Posts -->
   <url>
     <loc>https://stackinsight.dev/blog/fullstack-authentication-boilerplate</loc>
-    <lastmod>2025-09-27</lastmod>
+    <lastmod>2025-09-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://stackinsight.dev/blog/crypto-tracker-article-s1</loc>
-    <lastmod>2025-09-27</lastmod>
+    <lastmod>2025-09-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
