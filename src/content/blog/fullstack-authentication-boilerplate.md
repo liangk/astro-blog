@@ -1,12 +1,26 @@
 ---
 title: "Modern Fullstack Authentication Boilerplate: Complete Guide 2025"
-description: "Build secure authentication with Angular, Express, PostgreSQL. Features JWT HTTP-only cookies, refresh token rotation, and TypeScript. Complete starter kit with best practices."
-keywords: "fullstack authentication, Angular Express authentication, JWT HTTP-only cookies, refresh token rotation, TypeScript authentication boilerplate, secure login system, PostgreSQL authentication, Angular Material login"
 pubDate: "2025-09-02"
 heroImage: '../../assets/fullstack-authentication-boilerplate.png'
 author: "Ko-Hsin Liang"
 categories: ["Authentication", "Angular", "Express", "Security", "TypeScript"]
-tags: ["JWT", "HTTP-only cookies", "Prisma", "PostgreSQL", "Angular Material", "refresh tokens"]
+repo: "https://github.com/liangk/fullstack-auth-boilerplate"
+description: "This document outlines a full-stack authentication boilerplate project available on GitHub, designed to provide a robust starting point for web application development. It details a modern tech stack, including Node.js, Express, Prisma (with PostgreSQL), and JWT for the backend, alongside Angular (with Material UI) for the frontend."
+metaDescription: "Learn how to build secure authentication with Angular, Express, PostgreSQL, and JWT in HTTP-only cookies. Complete fullstack boilerplate with refresh token rotation and TypeScript."
+keywords: ["fullstack authentication", "angular express jwt", "http-only cookies", "refresh token rotation", "postgresql prisma", "secure authentication", "typescript boilerplate", "angular material"]
+ogTitle: "Modern Fullstack Authentication Boilerplate: Angular + Express + PostgreSQL"
+ogDescription: "Secure, production-ready authentication starter kit with JWT in HTTP-only cookies, refresh token rotation, and end-to-end TypeScript. No third-party auth services needed."
+ogImage: "/images/fullstack-authentication-boilerplate.png"
+ogType: "article"
+twitterCard: "summary_large_image"
+twitterCreator: "@kohsinliang"
+publishedDate: "2025-09-02T00:00:00Z"
+section: "Web Development"
+tags: ["Authentication", "Angular", "Express", "PostgreSQL", "JWT", "TypeScript", "Security", "HTTP-only cookies", "Prisma", "Angular Material", "refresh tokens"]
+readTime: 12
+wordCount: 2500
+canonicalUrl: "https://stackinsight.dev/blog/fullstack-authentication-boilerplate"
+
 ---
 
 # Modern Fullstack Authentication Boilerplate: A Comprehensive Guide  

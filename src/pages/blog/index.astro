@@ -16,42 +16,28 @@ const posts = (await getCollection('blog')).sort(
 <html lang="en">
 	<head>
 		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
-		<style>
-			main {
-				width: 960px;
-			}
-			ul {
-				display: flex;
-				flex-wrap: wrap;
-				gap: 2rem;
-				list-style-type: none;
-				margin: 0;
-				padding: 0;
-			}
-			ul li {
-				width: calc(50% - 1rem);
+		<style lang="scss">
+			main { width: 960px;
+				ul { display: flex; flex-wrap: wrap; gap: 2rem;
+					list-style-type: none; margin: 0; padding: 0;
+					li { width: 100%; display: flex; border: 1px solid #eaeaea; border-radius: 12px;
+    				overflow: hidden; transition: all .3s cubic-bezier(.25, .8, .25, 1); 
+						.thumbnail { width: 200px; height: 100%; }
+						img { width: 100%; height: 100%; object-fit: cover; transition: transform .5s ease; border-radius: 0;}
+						.blog-content { display: flex; flex-direction: column; padding: 20px;
+							background: linear-gradient(135deg, #fff, #f8f9fa); gap: 10px;
+							a { display: flex; flex-direction: column; gap: 10px; }
+							.title { margin: 0; color: rgb(var(--black)); line-height: 1; }
+							.description { margin: 0; color: rgb(var(--gray)); line-height: 1.5; }
+							.date { margin: 0; color: rgb(var(--gray)); line-height: 1; }
+							.repo { margin: 0; color: rgb(var(--gray)); line-height: 1; }
+						}
+					}				
+				}
 			}
 			ul li * {
 				text-decoration: none;
 				transition: 0.2s ease;
-			}
-			ul li:first-child {
-				width: 100%;
-				margin-bottom: 1rem;
-				text-align: center;
-			}
-			ul li:first-child img {
-				width: 100%;
-			}
-			ul li:first-child .title {
-				font-size: 2.369rem;
-			}
-			ul li img {
-				margin-bottom: 0.5rem;
-				border-radius: 12px;
-			}
-			ul li a {
-				display: block;
 			}
 			.title {
 				margin: 0;
@@ -66,7 +52,7 @@ const posts = (await getCollection('blog')).sort(
 			ul li a:hover .date {
 				color: rgb(var(--accent));
 			}
-			ul a:hover img {
+			ul li:hover {
 				box-shadow: var(--box-shadow);
 			}
 			@media (max-width: 720px) {
@@ -76,12 +62,6 @@ const posts = (await getCollection('blog')).sort(
 				ul li {
 					width: 100%;
 					text-align: center;
-				}
-				ul li:first-child {
-					margin-bottom: 0;
-				}
-				ul li:first-child .title {
-					font-size: 1.563em;
 				}
 			}
 		</style>
@@ -96,12 +76,20 @@ const posts = (await getCollection('blog')).sort(
 							<li>
 								<a href={`/blog/${post.id}/`}>
 									{post.data.heroImage && (
-										<Image width={720} height={360} src={post.data.heroImage} alt="" />
+										<div class="thumbnail">
+											<Image width={720} height={360} src={post.data.heroImage} alt="" />
+										</div>
 									)}
-									<h4 class="title">{post.data.title}</h4>
-									<p class="date">
-										<FormattedDate date={post.data.pubDate!} />
-									</p>
+									<div class="blog-content">
+										<h4 class="title">{post.data.title}</h4>
+										<p class="description">{post.data.description}</p>
+										<div class="repo">
+											<a href={post.data.repo} target="_blank">View on GitHub</a>
+										</div>
+										<p class="date">
+											<FormattedDate date={post.data.pubDate!} />
+										</p>
+									</div>
 								</a>
 							</li>
 						))

@@ -43,7 +43,7 @@ body {
 	margin: 0;
 	padding: 0;
 	text-align: left;
-	background: linear-gradient(var(--gray-gradient)) no-repeat;
+	background: linear-gradient(var(--white)) no-repeat;
 	background-size: 100% 600px;
 	word-wrap: break-word;
 	overflow-wrap: break-word;
@@ -75,10 +75,10 @@ h3 {
 	font-size: 1.6em;
 }
 h4 {
-	font-size: 1.3em;
+	font-size: 1.3em; font-family: 'Ubuntu', sans-serif;
 }
 h5 {
-	font-size: 1.1em;
+	font-size: 1.1em; font-family: 'Ubuntu', sans-serif;
 }
 strong,
 b {
