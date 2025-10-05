@@ -1,7 +1,7 @@
 ---
 title: "The Real Story: Deploying Full-Stack Apps After Multiple Platform Failures"
 pubDate: "2025-10-01"
-heroImage: '../../assets/fullstack-deployment-guide.jpg'
+heroImage: '../../assets/fullstack-deployment-guide.webp'
 author: "Ko-Hsin Liang"
 categories: ["Deployment", "Angular", "Express", "DevOps", "Cloud", "Real-World"]
 repo: "https://github.com/liangk/fullstack-auth-boilerplate"
@@ -10,7 +10,7 @@ metaDescription: "Real-world deployment story: From Railway database failures to
 keywords: ["angular deployment", "vercel deployment", "render deployment", "neon database", "railway issues", "cross-origin cookies", "fullstack deployment", "deployment troubleshooting", "prisma deployment", "cors issues"]
 ogTitle: "Real Deployment Story: Vercel + Render + Neon (After Railway Failures)"
 ogDescription: "The honest story of deploying a full-stack app after multiple platform failures. Railway DB issues, Render limitations, cross-origin cookie problems, and the final working solution."
-ogImage: "/images/fullstack-deployment-guide.png"
+ogImage: "/images/fullstack-deployment-guide.webp"
 ogType: "article"
 twitterCard: "summary_large_image"
 twitterCreator: "@kohsinliang"

@@ -1,7 +1,7 @@
 ---
 title: "Modern Fullstack Authentication Boilerplate: Complete Guide 2025"
 pubDate: "2025-09-02"
-heroImage: '../../assets/fullstack-authentication-boilerplate.png'
+heroImage: '../../assets/fullstack-authentication-boilerplate.webp'
 author: "Ko-Hsin Liang"
 categories: ["Authentication", "Angular", "Express", "Security", "TypeScript"]
 repo: "https://github.com/liangk/fullstack-auth-boilerplate"
@@ -10,7 +10,7 @@ metaDescription: "Learn how to build secure authentication with Angular, Express
 keywords: ["fullstack authentication", "angular express jwt", "http-only cookies", "refresh token rotation", "postgresql prisma", "secure authentication", "typescript boilerplate", "angular material"]
 ogTitle: "Modern Fullstack Authentication Boilerplate: Angular + Express + PostgreSQL"
 ogDescription: "Secure, production-ready authentication starter kit with JWT in HTTP-only cookies, refresh token rotation, and end-to-end TypeScript. No third-party auth services needed."
-ogImage: "/images/fullstack-authentication-boilerplate.png"
+ogImage: "/images/fullstack-authentication-boilerplate.webp"
 ogType: "article"
 twitterCard: "summary_large_image"
 twitterCreator: "@kohsinliang"
