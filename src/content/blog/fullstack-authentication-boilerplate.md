@@ -10,7 +10,7 @@ metaDescription: "Learn how to build secure authentication with Angular, Express
 keywords: ["fullstack authentication", "angular express jwt", "http-only cookies", "refresh token rotation", "postgresql prisma", "secure authentication", "typescript boilerplate", "angular material"]
 ogTitle: "Modern Fullstack Authentication Boilerplate: Angular + Express + PostgreSQL"
 ogDescription: "Secure, production-ready authentication starter kit with JWT in HTTP-only cookies, refresh token rotation, and end-to-end TypeScript. No third-party auth services needed."
-ogImage: "/images/fullstack-authentication-boilerplate.webp"
+ogImage: "/assets/fullstack-authentication-boilerplate.webp"
 ogType: "article"
 twitterCard: "summary_large_image"
 twitterCreator: "@kohsinliang"
