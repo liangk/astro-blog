@@ -9,10 +9,18 @@ Sitemap: https://stackinsight.dev/sitemap.xml
 Disallow: /admin/
 Disallow: /private/
 Disallow: /api/
+Disallow: /login
+Disallow: /wp-admin
+Disallow: /wp-login
 
-# Allow all other pages
+# Allow static assets
 Allow: /*.html$
 Allow: /*.css$
 Allow: /*.js$
+Allow: /*.png$
+Allow: /*.jpg$
+Allow: /*.svg$
+Allow: /*.webp$
 
 # Crawl-delay: 10  # Uncomment if needed to limit crawl rate
+# Host: stackinsight.dev  # Uncomment to specify preferred domain
