@@ -7,6 +7,6 @@ import mermaid from 'astro-mermaid';
 
 // https://astro.build/config
 export default defineConfig({
-	site: 'https://example.com',
+	site: 'https://stackinsight.dev',
 	integrations: [mdx(), sitemap(), mermaid()],
 });
