@@ -86,8 +86,8 @@ const ogType = props.ogType ?? 'website';
 <link rel="preload" href="/fonts/Ubuntu-Regular.ttf" as="font" type="font/ttf" crossorigin />
 <link rel="preload" href="/fonts/Rokkitt-VariableFont_wght.ttf" as="font" type="font/ttf" crossorigin />
 
-<!-- Canonical URL -->
 <link rel="canonical" href={canonicalURL} />
+<link rel="alternate" hreflang="en" href={canonicalURL} />
 
 <!-- Primary Meta Tags -->
 <title>{pageTitle}</title>
@@ -98,13 +98,13 @@ const ogType = props.ogType ?? 'website';
 <meta name="robots" content={robots} />
 <meta name="theme-color" content={DEFAULTS.themeColor} />
 
-<!-- Open Graph / Facebook -->
 <meta property="og:type" content={ogType} />
 <meta property="og:site_name" content={SITE_TITLE} />
 <meta property="og:url" content={canonicalURL} />
 <meta property="og:title" content={ogTitle} />
 <meta property="og:description" content={ogDescription} />
 <meta property="og:image" content={ogImageUrl} />
+<meta property="og:locale" content="en_US" />
 
 <!-- Twitter -->
 <meta property="twitter:card" content={twitterCard} />
