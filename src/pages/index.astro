@@ -8,16 +8,18 @@ import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
 <!doctype html>
 <html lang="en">
 	<head>
-		<BaseHead />
+		<BaseHead title="StackInsight Auth Lite — Free Auth Starter & Docs" description="Explore the free-tier StackInsight Auth Lite: quick start guides, architecture, authentication flow, API reference, and more." />
 	</head>
 	<body>
 		<Header />
 		<main>
-			<h1>Modern Web Development Insights</h1>
+			<h1>StackInsight Auth Lite</h1>
 			<div class="hero-section">
-				<p class="tagline">
-					Expert tutorials, in-depth analyses, and practical guides for today's web developers
-				</p>
+				<p class="tagline">Free-tier authentication starter kit with guides, reference docs, and best practices.</p>
+				<div class="cta-buttons">
+					<a href="/docs" class="button primary">View Docs</a>
+					<a href="/blog" class="button secondary">Read Blog</a>
+				</div>
 			</div>
 
 			<section class="introduction">
@@ -110,9 +112,7 @@ import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
 				margin: 3rem 0 1rem;
 			}
 			
-			.cta-buttons {
-				margin-top: 1.5rem;
-			}
+			.cta-buttons { margin-top: 1.5rem; display: flex; gap: .75rem; flex-wrap: wrap; }
 			
 			.button {
 				display: inline-block;
@@ -123,16 +123,12 @@ import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
 				transition: all 0.2s ease;
 			}
 			
-			.button.primary {
-				background: var(--accent);
-				color: white;
-			}
+			.button.primary { background: var(--accent); color: #fff; }
+			.button.secondary { background: #eef2ff; color: var(--accent); }
 			
-			.button.primary:hover {
-				background: var(--accent-dark);
-				transform: translateY(-2px);
-				box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-			}
+			.button.primary:hover, .button.secondary:hover { transform: translateY(-2px); box-shadow: 0 4px 8px rgba(0,0,0,0.1); }
+			.button.primary:hover { background: var(--accent-dark); }
+			.button.secondary:hover { background: #e0e7ff; }
 			
 			@media (max-width: 768px) {
 				.highlights-grid {
