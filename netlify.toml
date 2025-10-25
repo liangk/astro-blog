@@ -1,5 +1,5 @@
 [build]
-  command = "npm run build"
+  command = "git submodule update --init --recursive && npm run build"
   publish = "dist"
 
 # Astro generates static files, no SPA redirects needed
