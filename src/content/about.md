@@ -1,3 +1,8 @@
+---
+title: "About"
+description: "Modern web insights and tools for full-stack developers."
+---
+
 **Modern web insights and tools for full-stack developers.**
 
 Welcome to StackInsight.dev — a workspace for sharing lessons from real projects and the home of **StackInsight Auth Lite**, a lightweight authentication module for modern full-stack apps.
