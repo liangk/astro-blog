@@ -1,6 +1,6 @@
 ---
 import Layout from '../layouts/BlogPost.astro';
-import AboutContent from './about.md';
+import AboutContent from '../content/about.md';
 const aboutMeta = (AboutContent as any).frontmatter || {};
 const pageTitle = aboutMeta.title || 'About';
 const pageDescription = aboutMeta.description || 'Modern web insights and tools for full-stack developers.';
