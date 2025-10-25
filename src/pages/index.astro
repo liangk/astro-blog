@@ -3,138 +3,27 @@ import BaseHead from '../components/BaseHead.astro';
 import Footer from '../components/Footer.astro';
 import Header from '../components/Header.astro';
 import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
+import Home from './home.md';
+const homeMeta = (Home as any).frontmatter || {};
+const pageTitle = homeMeta.title || 'StackInsight Developer Hub';
+const pageDescription = homeMeta.description || 'Developer tutorials and documentation for StackInsight Auth Lite — practical guides to build secure, modern authentication systems.';
 ---
 
 <!doctype html>
 <html lang="en">
 	<head>
-		<BaseHead title="StackInsight Auth Lite — Free Auth Starter & Docs" description="Explore the free-tier StackInsight Auth Lite: quick start guides, architecture, authentication flow, API reference, and more." />
+		<BaseHead title={pageTitle} description={pageDescription} />
 	</head>
 	<body>
 		<Header />
 		<main>
-			<h1>StackInsight Auth Lite</h1>
-			<div class="hero-section">
-				<p class="tagline">Free-tier authentication starter kit with guides, reference docs, and best practices.</p>
-				<div class="cta-buttons">
-					<a href="/docs" class="button primary">View Docs</a>
-					<a href="/blog" class="button secondary">Read Blog</a>
-				</div>
+			<div class="home-container">
+				<Home />
 			</div>
-
-			<section class="introduction">
-				<p>
-					Welcome to <strong>StackInsight.dev</strong>, where we decode complex web development concepts into 
-					actionable insights. Our mission is to help developers build modern, performant, and secure applications 
-					through detailed tutorials, case studies, and best practices.
-				</p>
-				
-				<p>
-					Whether you're looking to master authentication patterns, optimize React applications, or explore 
-					the latest frontend frameworks, our practical guides provide the technical depth you need to 
-					implement solutions with confidence.
-				</p>
-			</section>
-
-			<section class="content-highlights">
-				<h2>What You'll Find Here</h2>
-				<div class="highlights-grid">
-					<div class="highlight-item">
-						<h3>📊 Technical Deep Dives</h3>
-						<p>Thorough explorations of web technologies that go beyond the basics to address real-world challenges.</p>
-					</div>
-					<div class="highlight-item">
-						<h3>🔧 Implementation Guides</h3>
-						<p>Step-by-step tutorials with complete code examples that you can adapt to your own projects.</p>
-					</div>
-					<div class="highlight-item">
-						<h3>⚡ Performance Insights</h3>
-						<p>Optimization techniques to ensure your applications remain fast, responsive, and efficient.</p>
-					</div>
-					<div class="highlight-item">
-						<h3>🔒 Security Best Practices</h3>
-						<p>Modern approaches to keeping your applications and user data secure in an evolving threat landscape.</p>
-					</div>
-				</div>
-			</section>
-
-			<section class="cta">
-				<h2>Start Exploring</h2>
-				<p>
-					Browse our latest articles or dive into specific topics through our categorized content. 
-					Each post is crafted to provide actionable insights that you can immediately apply to your work.
-				</p>
-				<div class="cta-buttons">
-					<a href="/blog" class="button primary">Read Latest Articles</a>
-				</div>
-			</section>
 		</main>
 
 		<style>
-			.hero-section {
-				margin-bottom: 3rem;
-			}
-			
-			.tagline {
-				font-size: 1.5em;
-				color: #555;
-				line-height: 1.4;
-			}
-			
-			section {
-				margin: 3rem 0;
-			}
-			
-			.highlights-grid {
-				display: grid;
-				grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-				gap: 2rem;
-				margin: 2rem 0;
-			}
-			
-			.highlight-item {
-				padding: 1.5rem;
-				background: #f9f9f9;
-				border-radius: 8px;
-				box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-			}
-			
-			.highlight-item h3 {
-				margin-top: 0;
-				font-size: 1.3em;
-			}
-			
-			.cta {
-				text-align: center;
-				padding: 2rem;
-				background: #f5f5f5;
-				border-radius: 8px;
-				margin: 3rem 0 1rem;
-			}
-			
-			.cta-buttons { margin-top: 1.5rem; display: flex; gap: .75rem; flex-wrap: wrap; }
-			
-			.button {
-				display: inline-block;
-				padding: 0.8rem 1.5rem;
-				border-radius: 4px;
-				text-decoration: none;
-				font-weight: 500;
-				transition: all 0.2s ease;
-			}
-			
-			.button.primary { background: var(--accent); color: #fff; }
-			.button.secondary { background: #eef2ff; color: var(--accent); }
-			
-			.button.primary:hover, .button.secondary:hover { transform: translateY(-2px); box-shadow: 0 4px 8px rgba(0,0,0,0.1); }
-			.button.primary:hover { background: var(--accent-dark); }
-			.button.secondary:hover { background: #e0e7ff; }
-			
-			@media (max-width: 768px) {
-				.highlights-grid {
-					grid-template-columns: 1fr;
-				}
-			}
+			.home-container { max-width: 900px; margin: 0 auto; padding: 2rem 1rem; }
 		</style>
 		<Footer />
 		<!-- For the reactive form to work with Netlify, you also need to create a hidden HTML form
