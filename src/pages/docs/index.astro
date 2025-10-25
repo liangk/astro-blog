@@ -6,7 +6,7 @@ import Header from '../../components/Header.astro';
 
 const docs = await getCollection('docs');
 const idMap = new Map(docs.map((d) => [d.id.toLowerCase(), d.id]));
-const hrefFor = (slug: string) => `/docs/${idMap.get(slug.toLowerCase()) ?? slug}/`;
+const hrefFor = (slug: string) => `/docs/${idMap.get(slug.toLowerCase()) ?? slug}`;
 
 const menuStructure = [
 	{
