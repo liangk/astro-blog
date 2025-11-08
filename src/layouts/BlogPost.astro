@@ -40,8 +40,9 @@ const tags = (fm.tags ?? fm.categories) as string[] | undefined;
 		{tags && tags.map((t) => (<meta property="article:tag" content={t} />))}
 
 		<!-- JSON-LD Structured Data -->
-		<script type="application/ld+json">
-			{JSON.stringify({
+		<script
+			type="application/ld+json"
+			set:html={JSON.stringify({
 				"@context": "https://schema.org",
 				"@type": "Article",
 				headline: title,
@@ -53,7 +54,7 @@ const tags = (fm.tags ?? fm.categories) as string[] | undefined;
 				mainEntityOfPage: canonicalURL.href,
 				keywords: tags && tags.length ? tags.join(', ') : undefined
 			})}
-		</script>
+		></script>
 		<style lang="scss">
 			main {
 				width: calc(100% - 2em);
