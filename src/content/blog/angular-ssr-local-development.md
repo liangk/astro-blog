@@ -1145,7 +1145,9 @@ With local SSR working, you're ready to:
 
 ---
 
-**Need a production-ready solution?** Check out [StackInsight Auth Pro](https://stackinsight.app) for a complete Angular SSR authentication boilerplate.
+> **Skip the Boilerplate with StackInsight Auth Pro**  
+> If you want this honest SSR dev setup *and* a production-ready auth stack, check out **StackInsight Auth Pro** — a production-ready Angular 20 SSR + httpOnly cookie authentication starter. It packages the patterns from this guide into a ready-to-run project so you can focus on your product, not wiring.  
+> Learn more at [stackinsight.app](https://stackinsight.app)
 
 **Questions or feedback?** Reach out via [contact form](https://stackinsight.dev/contact) or [@stackinsightDev](https://twitter.com/stackinsightDev)
 

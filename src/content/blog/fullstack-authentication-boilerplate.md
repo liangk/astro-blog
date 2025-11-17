@@ -695,6 +695,10 @@ Built for developers who value **control**, **clarity**, and **correctness**.
 
 Star it, use it, and tag me — I'd love to see your projects!
 
+> **From Boilerplate to Product-Ready Auth**  
+> Like this fullstack auth boilerplate but want a maintained, deployment-focused version? **StackInsight Auth Pro** is a commercial starter built on the same principles — Angular + Node.js, httpOnly cookies, refresh token rotation, and real-world deployment patterns — so you can ship secure auth faster.  
+> Explore it at [stackinsight.app](https://stackinsight.app)
+
 ---
 
 **Happy coding,**  

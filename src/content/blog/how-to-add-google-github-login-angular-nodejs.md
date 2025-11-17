@@ -563,3 +563,7 @@ Next time you need another provider — Twitter, Discord, or Apple — you alrea
 
 That’s what full-stack control feels like.
 
+> **Production-Ready Auth with Social Login**  
+> If you want email/password, Google, and GitHub login with JWT httpOnly cookies already integrated into an Angular + Node.js stack, **StackInsight Auth Pro** gives you that foundation out of the box — with clean TypeScript, Prisma, and deployment patterns ready to go.  
+> Check it out at [stackinsight.app](https://stackinsight.app)
+

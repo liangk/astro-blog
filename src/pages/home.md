@@ -40,7 +40,7 @@ StackInsight is an independent software brand focused on modular authentication 
 We aim to make secure authentication accessible without complexity — empowering developers to move faster with confidence.
 
 If you’re exploring production-ready auth solutions, visit  
-[**StackInsight Auth Pro** →](https://stackinsight.app/auth-pro)
+[**StackInsight Auth Pro** →](https://stackinsight.app)
 
 ---
 
