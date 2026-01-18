@@ -1,6 +1,6 @@
 ---
 title: "I Spent 3 Months Building Auth So You Don't Have To: The Real Story"
-pubDate: "2025-12-19"
+pubDate: "2026-01-18"
 heroImage: '../../assets/angular-saas-starter-journey.webp'
 author: "Ko-Hsin Liang"
 categories: ["Authentication", "Angular", "SaaS", "Real-World", "Security"]
@@ -14,7 +14,7 @@ ogImage: "/assets/angular-saas-starter-journey.webp"
 ogType: "article"
 twitterCard: "summary_large_image"
 twitterCreator: "@stackinsightDev"
-publishedDate: "2025-12-19T00:00:00Z"
+publishedDate: "2026-01-18T00:00:00Z"
 section: "Authentication"
 tags: ["Authentication", "Angular", "SaaS", "OAuth", "2FA", "Magic Links", "JWT", "Security", "Real-World", "Production"]
 readTime: 15
@@ -30,7 +30,7 @@ canonicalUrl: "https://stackinsight.dev/blog/angular-saas-starter-journey"
 
 This is the story of building **StackInsight Auth Pro**—a complete, production-ready authentication system for Angular SaaS applications. Three months of full-time work. 15,000+ lines of code. More edge cases than I ever imagined existed. And one crystal-clear realization: **you shouldn't have to do this yourself**.
 
-*Last updated: December 19, 2025 | Angular 20, Node.js 20, Tested in production*
+*Last updated: January 18, 2026 | Angular 20, Node.js 20, Tested in production*
 
 ---
 
