@@ -1149,7 +1149,7 @@ With local SSR working, you're ready to:
 > If you want this honest SSR dev setup *and* a production-ready auth stack, check out **StackInsight Auth Pro** — a production-ready Angular 20 SSR + httpOnly cookie authentication starter. It packages the patterns from this guide into a ready-to-run project so you can focus on your product, not wiring.  
 > Learn more at [stackinsight.app](https://stackinsight.app)
 
-**Questions or feedback?** Reach out via [contact form](https://stackinsight.dev/contact) or [@stackinsightDev](https://twitter.com/stackinsightDev)
+**Questions or feedback?** Reach out via [contact form](https://stackinsight.dev/contact) or [@stackinsightDev](https://x.com/StackInsightDev)
 
 ---
 

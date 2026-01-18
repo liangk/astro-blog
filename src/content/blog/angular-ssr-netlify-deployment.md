@@ -1047,7 +1047,7 @@ With SSR deployed, consider:
 > If you’d rather not reinvent this whole Angular 20 SSR + Netlify + httpOnly cookie setup, **StackInsight Auth Pro** ships with a working configuration out of the box — including serverless SSR, auth-safe routing, and production-ready build scripts.  
 > See what’s included at [stackinsight.app](https://stackinsight.app)
 
-**Questions or feedback?** Reach out via [contact form](https://stackinsight.dev/contact) or [@stackinsightDev](https://twitter.com/stackinsightDev)
+**Questions or feedback?** Reach out via [contact form](https://stackinsight.dev/contact) or [@stackinsightDev](https://x.com/StackInsightDev)
 
 ---
 

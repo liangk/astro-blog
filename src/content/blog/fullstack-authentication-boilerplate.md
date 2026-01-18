@@ -13,7 +13,7 @@ ogDescription: "Secure, production-ready authentication starter kit with JWT in 
 ogImage: "/assets/fullstack-authentication-boilerplate.webp"
 ogType: "article"
 twitterCard: "summary_large_image"
-twitterCreator: "@kohsinliang"
+twitterCreator: "@stackinsightDev"
 publishedDate: "2025-09-02T00:00:00Z"
 section: "Web Development"
 tags: ["Authentication", "Angular", "Express", "PostgreSQL", "JWT", "TypeScript", "Security", "HTTP-only cookies", "Prisma", "Angular Material", "refresh tokens"]
