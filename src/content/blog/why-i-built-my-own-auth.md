@@ -13,7 +13,7 @@ ogDescription: "The pricing page said $96,000/year. For authentication. This is 
 ogImage: "/assets/why-i-built-my-own-auth.webp"
 ogType: "article"
 twitterCard: "summary_large_image"
-twitterCreator: "@kohsinliang"
+twitterCreator: "@stackinsightDev"
 publishedDate: "2026-01-14T00:00:00Z"
 section: "SaaS Business"
 tags: ["Authentication", "SaaS", "Pricing", "Auth0", "Clerk", "Cost Analysis", "Build vs Buy", "Vendor Lock-in", "Business Decision"]
@@ -248,7 +248,7 @@ The decision became obvious.
 
 **The bottom line:** 90 hours of development work saved me $96,000/year in ongoing costs.
 
-*Want the full technical breakdown?* I'm publishing a detailed 3-month development journey with week-by-week implementation details, edge cases, and lessons learned. Subscribe below to get notified when it drops.
+*Want the full technical breakdown?* Read the detailed 3-month development journey with week-by-week implementation details, edge cases, and lessons learned in [I Spent 3 Months Building Auth So You Don't Have To](/blog/angular-saas-starter-journey).
 
 ---
 
@@ -570,7 +570,7 @@ Drop a comment below or find me on Twitter/GitHub. I'd love to hear your story.
 — Ko-Hsin Liang
 
 *Follow me on GitHub: [@liangk](https://github.com/liangk)*  
-*Follow me on Twitter: [@kohsinliang](https://twitter.com/kohsinliang)*
+*Follow me on Twitter: [@stackinsightDev](https://x.com/StackInsightDev)*
 
 ---
 

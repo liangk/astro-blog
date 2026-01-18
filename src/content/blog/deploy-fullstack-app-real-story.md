@@ -13,7 +13,7 @@ ogDescription: "The honest story of deploying a full-stack app after multiple pl
 ogImage: "/assets/deploy-fullstack-app-real-story.webp"
 ogType: "article"
 twitterCard: "summary_large_image"
-twitterCreator: "@kohsinliang"
+twitterCreator: "@stackinsightDev"
 publishedDate: "2025-10-01T00:00:00Z"
 section: "DevOps & Deployment"
 tags: ["Deployment", "Angular", "Express", "Vercel", "Render", "Neon", "Railway", "PostgreSQL", "Prisma", "CORS", "Cross-Origin Cookies", "DevOps", "Real-World Problems"]

@@ -14,7 +14,7 @@ ogDescription: "Build your own real-time cryptocurrency dashboard with React. Tr
 ogImage: "/assets/crypto-tracker-article-s1.webp"
 ogType: "article"
 twitterCard: "summary_large_image"
-twitterCreator: "@kohsinliang"
+twitterCreator: "@stackinsightDev"
 publishedDate: "2025-09-16T00:00:00Z"
 section: "Cryptocurrency"
 tags: ["React", "Cryptocurrency", "Dashboard", "Real-time", "Portfolio", "Charts", "Free Hosting", "crypto tracker", "CoinGecko API", "free hosting", "real-time data", "Chart.js"]
