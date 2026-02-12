@@ -14,7 +14,6 @@ ogImage: "/assets/how-to-add-google-github-login-angular-nodejs.webp"
 ogType: "article"
 twitterCard: "summary_large_image"
 twitterCreator: "@stackinsightDev"
-publishedDate: "2025-10-07T00:00:00Z"
 section: "Authentication & Security"
 tags: ["OAuth2", "Angular", "Node.js", "Express", "Google Login", "GitHub Login", "JWT", "Authentication", "Social Login", "Prisma", "TypeScript", "Security"]
 readTime: 15

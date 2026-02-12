@@ -14,7 +14,6 @@ ogImage: "/assets/jwt-storage-cookies-vs-localstorage-which-is-right-for-your-ap
 ogType: "article"
 twitterCard: "summary_large_image"
 twitterCreator: "@stackinsightDev"
-publishedDate: "2025-10-11T00:00:00Z"
 section: "Authentication & Security"
 tags: ["JWT", "Authentication", "Security", "Cookies", "LocalStorage", "XSS", "CSRF", "Node.js", "Express", "React", "Web Security", "HTTP-Only Cookies", "Token Management", "Best Practices"]
 readTime: 25

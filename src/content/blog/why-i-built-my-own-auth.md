@@ -14,7 +14,6 @@ ogImage: "/assets/why-i-built-my-own-auth.webp"
 ogType: "article"
 twitterCard: "summary_large_image"
 twitterCreator: "@stackinsightDev"
-publishedDate: "2026-01-14T00:00:00Z"
 section: "SaaS Business"
 tags: ["Authentication", "SaaS", "Pricing", "Auth0", "Clerk", "Cost Analysis", "Build vs Buy", "Vendor Lock-in", "Business Decision"]
 readTime: 20

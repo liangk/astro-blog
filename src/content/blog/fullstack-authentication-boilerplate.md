@@ -14,7 +14,6 @@ ogImage: "/assets/fullstack-authentication-boilerplate.webp"
 ogType: "article"
 twitterCard: "summary_large_image"
 twitterCreator: "@stackinsightDev"
-publishedDate: "2025-09-02T00:00:00Z"
 section: "Web Development"
 tags: ["Authentication", "Angular", "Express", "PostgreSQL", "JWT", "TypeScript", "Security", "HTTP-only cookies", "Prisma", "Angular Material", "refresh tokens"]
 readTime: 12

@@ -14,7 +14,6 @@ ogImage: "/assets/angular-ssr-local-development.webp"
 ogType: "article"
 twitterCard: "summary_large_image"
 twitterCreator: "@stackinsightDev"
-publishedDate: "2025-11-10T00:00:00Z"
 section: "Development"
 tags: ["Angular", "SSR", "Express", "Development", "Local Setup", "API Proxy", "httpOnly Cookies", "Server-Side Rendering", "Testing"]
 readTime: 25

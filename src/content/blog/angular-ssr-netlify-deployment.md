@@ -14,7 +14,6 @@ ogImage: "/assets/angular-ssr-netlify-deployment.webp"
 ogType: "article"
 twitterCard: "summary_large_image"
 twitterCreator: "@stackinsightDev"
-publishedDate: "2025-11-10T00:00:00Z"
 section: "Deployment"
 tags: ["Angular", "SSR", "Netlify", "Deployment", "Authentication", "httpOnly Cookies", "Serverless Functions", "Server-Side Rendering", "Production"]
 readTime: 30

@@ -14,7 +14,6 @@ ogImage: "/assets/2fa-totp-implementation.webp"
 ogType: "article"
 twitterCard: "summary_large_image"
 twitterCreator: "@stackinsightDev"
-publishedDate: "2025-11-19T00:00:00Z"
 section: "Authentication"
 tags: ["2FA", "TOTP", "Node.js", "Angular", "Speakeasy", "JWT", "Security", "QR Code", "Authentication", "Full Stack"]
 readTime: 30

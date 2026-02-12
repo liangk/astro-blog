@@ -14,7 +14,6 @@ ogImage: "/assets/mastering-oauth-google-github-twitter.webp"
 ogType: "article"
 twitterCard: "summary_large_image"
 twitterCreator: "@stackinsightDev"
-publishedDate: "2025-12-08T00:00:00Z"
 section: "Authentication"
 tags: ["node", "angular", "oauth", "security", "typescript"]
 readTime: 25

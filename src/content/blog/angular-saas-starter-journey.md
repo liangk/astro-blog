@@ -14,7 +14,6 @@ ogImage: "/assets/angular-saas-starter-journey.webp"
 ogType: "article"
 twitterCard: "summary_large_image"
 twitterCreator: "@stackinsightDev"
-publishedDate: "2026-01-18T00:00:00Z"
 section: "Authentication"
 tags: ["Authentication", "Angular", "SaaS", "OAuth", "2FA", "Magic Links", "JWT", "Security", "Real-World", "Production"]
 readTime: 15
