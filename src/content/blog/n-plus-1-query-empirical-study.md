@@ -8,12 +8,8 @@ description: "We benchmarked four N+1 query patterns using Prisma and PostgreSQL
 excerpt: "Everyone warns you about the N+1 query problem, but nobody shows you the actual numbers. So we built a benchmark suite and measured it. The results surprised even us."
 lastmod: "2026-02-12"
 canonical_url: "https://stackinsight.dev/blog/n-plus-1-query-empirical-study"
-cover_image: "/images/blog/n-plus-1-query-empirical-study.webp"
-cover_image_alt: "Bar chart comparing N+1 query execution times vs optimized queries in Prisma ORM"
-og_image: "/images/blog/n-plus-1-query-empirical-study.webp"
-og_type: "article"
 twitter_card: "summary_large_image"
-twitter_site: "@stackinsight"
+twitter_site: "@stackinsightDev"
 
 # SEO
 keywords:
