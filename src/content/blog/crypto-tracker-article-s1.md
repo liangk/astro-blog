@@ -3,12 +3,52 @@ title: "How to Build a Free Crypto Tracker Dashboard with React in 2025"
 pubDate: "2025-09-17"
 heroImage: '../../assets/crypto-tracker-article-s1.webp'
 author: "Ko-Hsin Liang"
-categories: ["React", "Cryptocurrency", "Web Development", "API Integration"]
+# Taxonomy
+categories:
+  - React
+  - Cryptocurrency
+  - Web Development
+  - API Integration
 difficulty: "Intermediate"
 repo: "https://github.com/liangk/crypto-tracker"
 description: "A comprehensive guide on building a real-time cryptocurrency dashboard that tracks prices, displays charts, and provides market insights. The solution is built with modern web technologies and hosted completely free, handling hundreds of daily visitors."
 metaDescription: "Step-by-step guide to building your own free cryptocurrency tracker dashboard using React. Learn how to track crypto prices, build a portfolio, and analyze market trends."
-keywords: ["free crypto tracker", "build cryptocurrency dashboard", "react crypto portfolio", "crypto price tracker", "cryptocurrency portfolio tracker", "react crypto dashboard", "build crypto app", "free crypto portfolio", "CoinGecko API", "crypto app tutorial", "real-time crypto prices"]
+# SEO
+keywords:
+  - free crypto tracker
+  - build cryptocurrency dashboard
+  - react crypto portfolio
+  - crypto price tracker
+  - cryptocurrency portfolio tracker
+  - react crypto dashboard
+  - build crypto app
+  - free crypto portfolio
+  - CoinGecko API
+  - crypto app tutorial
+  - real-time crypto prices
+
+# AIEO (AI Engine Optimization)
+ai_summary: "A practical guide to building a real-time cryptocurrency dashboard with React using the free CoinGecko API. Covers price tracking, portfolio management, Chart.js visualizations, and free deployment. Includes the full project structure and working code for a production-ready crypto tracker."
+ai_key_facts:
+  - "CoinGecko API provides free real-time crypto prices with no API key required for basic endpoints"
+  - "React with Chart.js renders price history charts and portfolio performance visualizations"
+  - "The app tracks multiple cryptocurrencies simultaneously with auto-refresh on a configurable interval"
+  - "Free hosting on platforms like Vercel or Netlify makes this a zero-cost personal finance tool"
+  - "Portfolio tracking calculates total value, individual holdings, and percentage change over time"
+ai_entities:
+  - "React"
+  - "CoinGecko API"
+  - "Chart.js"
+  - "TypeScript"
+  - "Vercel"
+  - "Netlify"
+  - "Cryptocurrency"
+
+# Structured Data (Article Schema)
+schema_type: "TechArticle"
+schema_proficiency_level: "Intermediate"
+schema_dependencies: "React 18+, Node.js 18+, TypeScript 5+, CoinGecko API"
+schema_time_required: "PT8M"
 ogTitle: "How to Build a Free Crypto Tracker Dashboard with React in 2025"
 ogDescription: "Build your own real-time cryptocurrency dashboard with React. Track prices, display charts, and get market insights. Completely free hosting with hundreds of daily visitors."
 ogImage: "/assets/crypto-tracker-article-s1.webp"
@@ -16,7 +56,24 @@ ogType: "article"
 twitterCard: "summary_large_image"
 twitterCreator: "@stackinsightDev"
 section: "Cryptocurrency"
-tags: ["React", "Cryptocurrency", "Dashboard", "Real-time", "Portfolio", "Charts", "Free Hosting", "crypto tracker", "CoinGecko API", "free hosting", "real-time data", "Chart.js"]
+tags:
+  - React
+  - Cryptocurrency
+  - Dashboard
+  - Real-time
+  - Portfolio
+  - Charts
+  - Free Hosting
+  - crypto tracker
+  - CoinGecko API
+  - real-time data
+  - Chart.js
+
+# Related
+related_posts:
+  - deploy-fullstack-app-real-story
+series: "StackInsight Project Builds"
+series_order: 1
 readTime: 8
 wordCount: 1800
 canonicalUrl: "https://stackinsight.dev/blog/crypto-tracker-article-s1"

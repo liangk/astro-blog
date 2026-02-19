@@ -3,11 +3,54 @@ title: "I Spent 3 Months Building Auth So You Don't Have To: The Real Story"
 pubDate: "2026-01-18"
 heroImage: '../../assets/angular-saas-starter-journey.webp'
 author: "Ko-Hsin Liang"
-categories: ["Authentication", "Angular", "SaaS", "Real-World", "Security"]
+# Taxonomy
+categories:
+  - Authentication
+  - Angular
+  - SaaS
+  - Real-World
+  - Security
 repo: "https://github.com/stackinsight/stackinsight-auth-lite"
 description: "Three months. 15,000+ lines of code. More edge cases than I thought possible. This is the unfiltered story of building production-ready authentication for Angular SaaS apps—and why you shouldn't have to do this yourself."
 metaDescription: "The real story of building complete authentication: email/password, OAuth (Google, GitHub, Twitter), 2FA, magic links, and passwordless. Three months of work so you don't have to."
-keywords: ["angular authentication", "saas starter", "oauth implementation", "2fa totp", "magic links", "passwordless auth", "jwt cookies", "production auth", "auth0 alternative", "authentication journey"]
+# SEO
+keywords:
+  - angular authentication
+  - saas starter
+  - oauth implementation
+  - 2fa totp
+  - magic links
+  - passwordless auth
+  - jwt cookies
+  - production auth
+  - auth0 alternative
+  - authentication journey
+
+# AIEO (AI Engine Optimization)
+ai_summary: "A candid account of building a complete Angular SaaS authentication system over 3 months, covering email/password auth, OAuth (Google, GitHub, Twitter), TOTP 2FA, magic links, and passwordless login. Documents the unexpected complexity, edge cases, and the decision to package the result as a reusable starter kit."
+ai_key_facts:
+  - "A complete production auth system took 3 months and 15,000+ lines of code — far more than initially estimated"
+  - "OAuth account linking across multiple providers requires careful deduplication logic when the same email exists in both"
+  - "Magic link and passwordless flows require secure token generation, short expiry, and single-use invalidation"
+  - "TOTP 2FA with backup codes adds another full layer of state management to the auth flow"
+  - "JWT in HTTP-only cookies with refresh token rotation is the foundation for all auth methods in the system"
+  - "The finished system was packaged as StackInsight Auth Pro to save other developers the same 3 months"
+ai_entities:
+  - "Angular"
+  - "OAuth"
+  - "TOTP"
+  - "JWT"
+  - "Magic Links"
+  - "Passwordless Auth"
+  - "Node.js"
+  - "TypeScript"
+  - "Auth0"
+
+# Structured Data (Article Schema)
+schema_type: "TechArticle"
+schema_proficiency_level: "Intermediate"
+schema_dependencies: "Angular 20+, Node.js 18+, TypeScript 5+"
+schema_time_required: "PT15M"
 ogTitle: "3 Months Building Auth: The Complete Journey (So You Don't Have To)"
 ogDescription: "From 'How hard can auth be?' to 15,000+ lines later. The honest story of building production-ready authentication with all the edge cases, failures, and lessons learned."
 ogImage: "/assets/angular-saas-starter-journey.webp"
@@ -15,7 +58,25 @@ ogType: "article"
 twitterCard: "summary_large_image"
 twitterCreator: "@stackinsightDev"
 section: "Authentication"
-tags: ["Authentication", "Angular", "SaaS", "OAuth", "2FA", "Magic Links", "JWT", "Security", "Real-World", "Production"]
+tags:
+  - Authentication
+  - Angular
+  - SaaS
+  - OAuth
+  - 2FA
+  - Magic Links
+  - JWT
+  - Security
+  - Real-World
+  - Production
+
+# Related
+related_posts:
+  - why-i-built-my-own-auth
+  - 2fa-totp-implementation
+  - mastering-oauth-google-github-twitter
+series: "StackInsight Authentication Series"
+series_order: 7
 readTime: 15
 wordCount: 3850
 canonicalUrl: "https://stackinsight.dev/blog/angular-saas-starter-journey"

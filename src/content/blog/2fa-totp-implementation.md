@@ -3,11 +3,54 @@ title: "Complete 2FA (TOTP) Implementation: Node.js + Angular Full Guide"
 pubDate: "2025-11-19"
 heroImage: '../../assets/2fa-totp-implementation.webp'
 author: "Ko-Hsin Liang"
-categories: ["Authentication", "Security", "Node.js", "Angular", "2FA"]
+# Taxonomy
+categories:
+  - Authentication
+  - Security
+  - Node.js
+  - Angular
+  - 2FA
 repo: ""
 description: "Production-ready Two-Factor Authentication implementation using TOTP, Speakeasy, JWT, and QR codes. Complete backend and frontend guide for Node.js and Angular."
 metaDescription: "Learn how to implement complete 2FA (TOTP) authentication in Node.js and Angular. Includes Speakeasy integration, QR code generation, JWT tokens, and production security best practices."
-keywords: ["2fa implementation", "totp tutorial", "speakeasy nodejs", "angular 2fa", "two factor authentication", "qr code authentication", "jwt 2fa", "google authenticator integration", "production 2fa", "security authentication"]
+# SEO
+keywords:
+  - 2fa implementation
+  - totp tutorial
+  - speakeasy nodejs
+  - angular 2fa
+  - two factor authentication
+  - qr code authentication
+  - jwt 2fa
+  - google authenticator integration
+  - production 2fa
+  - security authentication
+
+# AIEO (AI Engine Optimization)
+ai_summary: "A production-grade implementation guide for Two-Factor Authentication (TOTP) in a Node.js + Angular full-stack app. Covers TOTP secret generation with Speakeasy, QR code provisioning, verification endpoints, JWT integration for 2FA state tracking, and security best practices including rate limiting and backup codes."
+ai_key_facts:
+  - "TOTP uses a shared secret and 30-second time window to generate 6-digit codes compatible with Google Authenticator and Authy"
+  - "Speakeasy generates and verifies TOTP secrets server-side; secrets are stored encrypted in the database"
+  - "QR code provisioning URI allows users to scan and enroll with any authenticator app"
+  - "JWT tokens carry a 2FA completion flag so partial authentication is scoped to TOTP verification only"
+  - "Rate limiting and account lockout are essential on the verification endpoint to prevent brute-force attacks"
+  - "Backup codes provide account recovery when users lose access to their authenticator device"
+ai_entities:
+  - "Node.js"
+  - "Angular"
+  - "Speakeasy"
+  - "TOTP"
+  - "JWT"
+  - "Express"
+  - "TypeScript"
+  - "Google Authenticator"
+  - "Authy"
+
+# Structured Data (Article Schema)
+schema_type: "TechArticle"
+schema_proficiency_level: "Intermediate"
+schema_dependencies: "Node.js v18+, Angular 17+, TypeScript 5+, Speakeasy 2.0+, Express 4"
+schema_time_required: "PT30M"
 ogTitle: "Build Production-Ready 2FA with Node.js + Angular | Complete TOTP Guide"
 ogDescription: "Step-by-step guide to implementing Two-Factor Authentication with TOTP. Includes backend, frontend, QR codes, and security best practices."
 ogImage: "/assets/2fa-totp-implementation.webp"
@@ -15,7 +58,25 @@ ogType: "article"
 twitterCard: "summary_large_image"
 twitterCreator: "@stackinsightDev"
 section: "Authentication"
-tags: ["2FA", "TOTP", "Node.js", "Angular", "Speakeasy", "JWT", "Security", "QR Code", "Authentication", "Full Stack"]
+tags:
+  - 2FA
+  - TOTP
+  - Node.js
+  - Angular
+  - Speakeasy
+  - JWT
+  - Security
+  - QR Code
+  - Authentication
+  - Full Stack
+
+# Related
+related_posts:
+  - why-i-built-my-own-auth
+  - angular-saas-starter-journey
+  - mastering-oauth-google-github-twitter
+series: "StackInsight Authentication Series"
+series_order: 3
 readTime: 30
 wordCount: 6200
 canonicalUrl: "https://stackinsight.dev/blog/2fa-totp-implementation"

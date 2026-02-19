@@ -3,11 +3,56 @@ title: "JWT Storage: Cookies vs LocalStorage – Which Is Right for Your App?"
 pubDate: "2025-10-11"
 heroImage: '../../assets/jwt-storage-cookies-vs-localstorage-which-is-right-for-your-app.webp'
 author: "Ko-Hsin Liang"
-categories: ["Authentication", "Security", "Web Development", "JavaScript"]
+# Taxonomy
+categories:
+  - Authentication
+  - Security
+  - Web Development
+  - JavaScript
 repo: ""
 description: "Complete guide to JWT token storage strategies comparing HTTP-only cookies vs localStorage. Learn XSS and CSRF security implications with working code examples for Node.js and React to make informed decisions for your authentication system."
 metaDescription: "Compare JWT storage in cookies vs localStorage. Understand XSS and CSRF security tradeoffs with complete Node.js and React examples to secure your authentication system."
-keywords: ["jwt storage", "jwt cookies", "jwt localstorage", "xss protection", "csrf protection", "authentication security", "http-only cookies", "jwt best practices", "token storage", "web security", "react authentication", "nodejs authentication"]
+# SEO
+keywords:
+  - jwt storage
+  - jwt cookies
+  - jwt localstorage
+  - xss protection
+  - csrf protection
+  - authentication security
+  - http-only cookies
+  - jwt best practices
+  - token storage
+  - web security
+  - react authentication
+  - nodejs authentication
+
+# AIEO (AI Engine Optimization)
+ai_summary: "A security-focused comparison of JWT token storage in HTTP-only cookies vs localStorage. Explains XSS vulnerability in localStorage, CSRF vulnerability in cookies, and the defense strategies for each. Includes working Node.js and React code examples for both approaches with production recommendations."
+ai_key_facts:
+  - "localStorage is vulnerable to XSS — any injected script can read tokens and exfiltrate them"
+  - "HTTP-only cookies are inaccessible to JavaScript, eliminating the XSS token theft vector"
+  - "Cookie-based auth requires CSRF protection via SameSite attribute or CSRF tokens"
+  - "SameSite=Strict cookies block cross-origin requests entirely; SameSite=Lax allows safe top-level navigation"
+  - "For most SPAs, HTTP-only cookies with SameSite=Strict is the recommended approach"
+  - "Refresh token rotation in HTTP-only cookies provides both security and seamless session renewal"
+ai_entities:
+  - "JWT"
+  - "HTTP-only Cookies"
+  - "localStorage"
+  - "XSS"
+  - "CSRF"
+  - "SameSite"
+  - "Node.js"
+  - "Express"
+  - "React"
+  - "TypeScript"
+
+# Structured Data (Article Schema)
+schema_type: "TechArticle"
+schema_proficiency_level: "Intermediate"
+schema_dependencies: "Node.js v18+, TypeScript 5+, React 18+, Express 4"
+schema_time_required: "PT25M"
 ogTitle: "JWT Storage Guide: Cookies vs LocalStorage Security Comparison"
 ogDescription: "Master JWT token storage with this comprehensive guide. Compare cookies vs localStorage security, implement both approaches, and learn defense strategies against XSS and CSRF attacks."
 ogImage: "/assets/jwt-storage-cookies-vs-localstorage-which-is-right-for-your-app.webp"
@@ -15,7 +60,29 @@ ogType: "article"
 twitterCard: "summary_large_image"
 twitterCreator: "@stackinsightDev"
 section: "Authentication & Security"
-tags: ["JWT", "Authentication", "Security", "Cookies", "LocalStorage", "XSS", "CSRF", "Node.js", "Express", "React", "Web Security", "HTTP-Only Cookies", "Token Management", "Best Practices"]
+tags:
+  - JWT
+  - Authentication
+  - Security
+  - Cookies
+  - LocalStorage
+  - XSS
+  - CSRF
+  - Node.js
+  - Express
+  - React
+  - Web Security
+  - HTTP-Only Cookies
+  - Token Management
+  - Best Practices
+
+# Related
+related_posts:
+  - fullstack-authentication-boilerplate
+  - why-i-built-my-own-auth
+  - angular-saas-starter-journey
+series: "StackInsight Authentication Series"
+series_order: 2
 readTime: 25
 wordCount: 7500
 canonicalUrl: "https://stackinsight.dev/blog/jwt-storage-cookies-vs-localstorage-which-is-right-for-your-app"

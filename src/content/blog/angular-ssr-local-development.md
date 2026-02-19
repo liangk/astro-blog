@@ -3,11 +3,49 @@ title: "Angular 20 SSR Local Development: Testing SSR the Right Way"
 pubDate: "2025-11-10"
 heroImage: '../../assets/angular-ssr-local-development.webp'
 author: "Ko-Hsin Liang"
-categories: ["Angular", "SSR", "Development", "Express", "Authentication"]
+# Taxonomy
+categories:
+  - Angular
+  - SSR
+  - Development
+  - Express
+  - Authentication
 repo: ""
 description: "How to actually test Angular 20 SSR locally without lying to yourself. Set up true server-side rendering with Express, API proxy, and development configs that mirror production."
 metaDescription: "Complete Angular 20 SSR local development setup with Express server, API proxy configuration, and disk-based builds. Test real SSR behavior locally before deploying to production."
-keywords: ["angular ssr local development", "angular express server", "ssr development setup", "angular api proxy", "testing ssr locally", "angular disk builds", "ng serve vs ssr", "angular development environment"]
+# SEO
+keywords:
+  - angular ssr local development
+  - angular express server
+  - ssr development setup
+  - angular api proxy
+  - testing ssr locally
+  - angular disk builds
+  - ng serve vs ssr
+  - angular development environment
+
+# AIEO (AI Engine Optimization)
+ai_summary: "A setup guide for testing Angular 20 SSR locally using a real Express server and API proxy, mirroring the production code path. Explains why ng serve does not test SSR behavior, how to configure disk-based builds, and how to proxy API requests to a local backend without CORS issues."
+ai_key_facts:
+  - "ng serve runs Angular in a webpack dev server without SSR; the Express SSR adapter is never invoked"
+  - "True local SSR testing requires building to disk and serving via the Express SSR server"
+  - "An angular.json proxy configuration routes /api requests to the local Express backend during development"
+  - "HTTP-only cookies work correctly in local SSR only when both frontend and backend share the same origin or use a proxy"
+  - "The build:ssr command produces a dist/ folder that the Express server serves, matching production behavior exactly"
+ai_entities:
+  - "Angular"
+  - "SSR"
+  - "Express"
+  - "Node.js"
+  - "TypeScript"
+  - "Webpack"
+  - "API Proxy"
+
+# Structured Data (Article Schema)
+schema_type: "TechArticle"
+schema_proficiency_level: "Intermediate"
+schema_dependencies: "Angular 20+, Node.js 20, Express 4"
+schema_time_required: "PT25M"
 ogTitle: "Angular 20 SSR Local Development: Stop Faking It with ng serve"
 ogDescription: "Set up true Angular SSR local development with Express server and API proxy. Test the same code path that runs in production, not in-memory dev server magic."
 ogImage: "/assets/angular-ssr-local-development.webp"
@@ -15,7 +53,24 @@ ogType: "article"
 twitterCard: "summary_large_image"
 twitterCreator: "@stackinsightDev"
 section: "Development"
-tags: ["Angular", "SSR", "Express", "Development", "Local Setup", "API Proxy", "httpOnly Cookies", "Server-Side Rendering", "Testing"]
+tags:
+  - Angular
+  - SSR
+  - Express
+  - Development
+  - Local Setup
+  - API Proxy
+  - httpOnly Cookies
+  - Server-Side Rendering
+  - Testing
+
+# Related
+related_posts:
+  - angular-ssr-netlify-deployment
+  - deploy-fullstack-app-real-story
+  - fullstack-authentication-boilerplate
+series: "StackInsight Angular SSR Series"
+series_order: 1
 readTime: 25
 wordCount: 5800
 canonicalUrl: "https://stackinsight.dev/blog/angular-ssr-local-development"

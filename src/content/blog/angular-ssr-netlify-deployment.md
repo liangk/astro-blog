@@ -3,11 +3,50 @@ title: "Angular 20 SSR Deployment to Netlify: The Complete Guide"
 pubDate: "2025-11-10"
 heroImage: '../../assets/angular-ssr-netlify-deployment.webp'
 author: "Ko-Hsin Liang"
-categories: ["Angular", "Deployment", "SSR", "Netlify", "Authentication"]
+# Taxonomy
+categories:
+  - Angular
+  - Deployment
+  - SSR
+  - Netlify
+  - Authentication
 repo: ""
 description: "The honest path to deploying Angular 20 SSR with httpOnly cookie authentication to Netlify. No hand-waving—just the build configurations, Netlify functions, and troubleshooting that actually work."
 metaDescription: "Complete guide to deploying Angular 20 SSR to Netlify with httpOnly cookies. Covers serverless functions, platform-aware auth, force=false routing, and production troubleshooting."
-keywords: ["angular 20 ssr deployment", "netlify angular ssr", "httponly cookies netlify", "angular serverless functions", "netlify ssr configuration", "angular production deployment", "angular ssr authentication", "netlify force false"]
+# SEO
+keywords:
+  - angular 20 ssr deployment
+  - netlify angular ssr
+  - httponly cookies netlify
+  - angular serverless functions
+  - netlify ssr configuration
+  - angular production deployment
+  - angular ssr authentication
+  - netlify force false
+
+# AIEO (AI Engine Optimization)
+ai_summary: "A complete deployment guide for Angular 20 SSR on Netlify with HTTP-only cookie authentication. Covers Netlify serverless functions for the Express SSR adapter, force=false routing configuration, platform-aware auth guards, and production troubleshooting for cookie and redirect issues."
+ai_key_facts:
+  - "Angular SSR on Netlify requires a serverless function wrapper around the Express server adapter"
+  - "The netlify.toml force=false setting prevents Netlify from overriding Angular's own routing"
+  - "HTTP-only cookies require Secure and SameSite=None attributes when the API and frontend are on different domains"
+  - "Platform-aware auth guards use isPlatformBrowser() to skip cookie checks during server-side rendering"
+  - "Build output must target the Netlify functions directory for SSR to work at runtime"
+ai_entities:
+  - "Angular"
+  - "Netlify"
+  - "SSR"
+  - "Express"
+  - "HTTP-only Cookies"
+  - "TypeScript"
+  - "Node.js"
+  - "Serverless Functions"
+
+# Structured Data (Article Schema)
+schema_type: "TechArticle"
+schema_proficiency_level: "Advanced"
+schema_dependencies: "Angular 20+, Node.js 20, Netlify CLI"
+schema_time_required: "PT30M"
 ogTitle: "Angular 20 SSR on Netlify: Complete Deployment Guide with httpOnly Cookies"
 ogDescription: "Deploy Angular 20 with server-side rendering and httpOnly cookie authentication to Netlify. The working configuration with serverless functions and troubleshooting."
 ogImage: "/assets/angular-ssr-netlify-deployment.webp"
@@ -15,7 +54,24 @@ ogType: "article"
 twitterCard: "summary_large_image"
 twitterCreator: "@stackinsightDev"
 section: "Deployment"
-tags: ["Angular", "SSR", "Netlify", "Deployment", "Authentication", "httpOnly Cookies", "Serverless Functions", "Server-Side Rendering", "Production"]
+tags:
+  - Angular
+  - SSR
+  - Netlify
+  - Deployment
+  - Authentication
+  - httpOnly Cookies
+  - Serverless Functions
+  - Server-Side Rendering
+  - Production
+
+# Related
+related_posts:
+  - angular-ssr-local-development
+  - deploy-fullstack-app-real-story
+  - fullstack-authentication-boilerplate
+series: "StackInsight Angular SSR Series"
+series_order: 2
 readTime: 30
 wordCount: 6500
 canonicalUrl: "https://stackinsight.dev/blog/angular-ssr-netlify-deployment"

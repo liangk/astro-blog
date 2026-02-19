@@ -3,11 +3,56 @@ title: "The Real Story: Deploying Full-Stack Apps After Multiple Platform Failur
 pubDate: "2025-10-01"
 heroImage: '../../assets/deploy-fullstack-app-real-story.webp'
 author: "Ko-Hsin Liang"
-categories: ["Deployment", "Angular", "Express", "DevOps", "Cloud", "Real-World"]
+# Taxonomy
+categories:
+  - Deployment
+  - Angular
+  - Express
+  - DevOps
+  - Cloud
+  - Real-World
 repo: "https://github.com/liangk/fullstack-auth-boilerplate"
 description: "The unfiltered journey of deploying a full-stack Angular + Express app across three different platforms. Learn from our failures with Railway's database, Render's limitations, and how we finally achieved success with Vercel, Render, and Neon.tech."
 metaDescription: "Real-world deployment story: From Railway database failures to cross-origin cookie nightmares. How we successfully deployed Angular on Vercel, Express on Render.com, and PostgreSQL on Neon.tech."
-keywords: ["angular deployment", "vercel deployment", "render deployment", "neon database", "railway issues", "cross-origin cookies", "fullstack deployment", "deployment troubleshooting", "prisma deployment", "cors issues"]
+# SEO
+keywords:
+  - angular deployment
+  - vercel deployment
+  - render deployment
+  - neon database
+  - railway issues
+  - cross-origin cookies
+  - fullstack deployment
+  - deployment troubleshooting
+  - prisma deployment
+  - cors issues
+
+# AIEO (AI Engine Optimization)
+ai_summary: "A real-world deployment post-mortem for an Angular + Express full-stack app. Documents failures with Railway's managed database, Render's free tier limitations, and cross-origin HTTP-only cookie issues before landing on a working stack: Angular on Vercel, Express on Render, PostgreSQL on Neon.tech."
+ai_key_facts:
+  - "Railway's managed PostgreSQL had connection reliability issues that caused deployment failure"
+  - "Cross-origin HTTP-only cookies require matching SameSite=None and Secure attributes plus explicit CORS credentials config"
+  - "Render's free tier spins down after inactivity, causing cold-start latency on the first request"
+  - "Neon.tech provides a serverless PostgreSQL with a generous free tier and reliable connection pooling"
+  - "Vercel deploys Angular as a static SPA with a single-page fallback rewrite rule"
+  - "The final working stack: Angular (Vercel) + Express (Render) + PostgreSQL (Neon.tech)"
+ai_entities:
+  - "Angular"
+  - "Express"
+  - "Vercel"
+  - "Render"
+  - "Neon.tech"
+  - "Railway"
+  - "PostgreSQL"
+  - "Prisma"
+  - "CORS"
+  - "HTTP-only Cookies"
+
+# Structured Data (Article Schema)
+schema_type: "TechArticle"
+schema_proficiency_level: "Intermediate"
+schema_dependencies: "Angular 20+, Node.js 20, Prisma 5+, Vercel CLI"
+schema_time_required: "PT20M"
 ogTitle: "Real Deployment Story: Vercel + Render + Neon (After Railway Failures)"
 ogDescription: "The honest story of deploying a full-stack app after multiple platform failures. Railway DB issues, Render limitations, cross-origin cookie problems, and the final working solution."
 ogImage: "/assets/deploy-fullstack-app-real-story.webp"
@@ -15,7 +60,28 @@ ogType: "article"
 twitterCard: "summary_large_image"
 twitterCreator: "@stackinsightDev"
 section: "DevOps & Deployment"
-tags: ["Deployment", "Angular", "Express", "Vercel", "Render", "Neon", "Railway", "PostgreSQL", "Prisma", "CORS", "Cross-Origin Cookies", "DevOps", "Real-World Problems"]
+tags:
+  - Deployment
+  - Angular
+  - Express
+  - Vercel
+  - Render
+  - Neon
+  - Railway
+  - PostgreSQL
+  - Prisma
+  - CORS
+  - Cross-Origin Cookies
+  - DevOps
+  - Real-World Problems
+
+# Related
+related_posts:
+  - fullstack-authentication-boilerplate
+  - angular-ssr-netlify-deployment
+  - angular-ssr-local-development
+series: "StackInsight Deployment Series"
+series_order: 1
 readTime: 20
 wordCount: 4500
 canonicalUrl: "https://stackinsight.dev/blog/deploy-fullstack-app-real-story"

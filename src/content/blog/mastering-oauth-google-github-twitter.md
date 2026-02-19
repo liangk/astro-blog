@@ -3,11 +3,52 @@ title: "Mastering OAuth: Google, GitHub, & Twitter in Node.js + Angular"
 pubDate: "2025-12-08"
 heroImage: "../../assets/mastering-oauth-google-github-twitter.webp"
 author: "Ko-Hsin Liang"
-categories: ["Authentication", "Security", "Node.js", "Angular", "OAuth"]
+# Taxonomy
+categories:
+  - Authentication
+  - Security
+  - Node.js
+  - Angular
+  - OAuth
 repo: ""
 description: "A comprehensive, step-by-step tutorial for implementing a unified OAuth system with account linking, PKCE security, and production-ready architecture."
 metaDescription: "Learn how to build a unified OAuth system for Google, GitHub, and Twitter in Node.js & Angular. Features account linking, PKCE security, and production-ready architecture."
-keywords: ["oauth nodejs angular", "google oauth tutorial", "github oauth implementation", "twitter pkce auth", "account linking oauth", "secure social login", "node.js authentication", "angular oauth2", "passportjs alternative"]
+# SEO
+keywords:
+  - oauth nodejs angular
+  - google oauth tutorial
+  - github oauth implementation
+  - twitter pkce auth
+  - account linking oauth
+  - secure social login
+  - node.js authentication
+  - angular oauth2
+  - passportjs alternative
+
+# AIEO (AI Engine Optimization)
+ai_summary: "A unified OAuth implementation guide for Google, GitHub, and Twitter in Node.js + Angular without Passport.js. Covers the authorization code flow with PKCE, account linking across multiple providers, JWT session management, and production security best practices."
+ai_key_facts:
+  - "OAuth 2.0 authorization code flow with PKCE prevents authorization code interception attacks"
+  - "Account linking allows a single user to connect multiple OAuth providers to one account"
+  - "Twitter/X requires PKCE; Google and GitHub support both implicit and PKCE flows"
+  - "State parameter prevents CSRF attacks during the OAuth redirect cycle"
+  - "JWT stored in HTTP-only cookies provides XSS-resistant session management post-OAuth"
+ai_entities:
+  - "OAuth 2.0"
+  - "PKCE"
+  - "Google"
+  - "GitHub"
+  - "Twitter"
+  - "Node.js"
+  - "Angular"
+  - "JWT"
+  - "TypeScript"
+
+# Structured Data (Article Schema)
+schema_type: "TechArticle"
+schema_proficiency_level: "Intermediate"
+schema_dependencies: "Node.js v18+, Angular 17+, TypeScript 5+, Express 4"
+schema_time_required: "PT25M"
 ogTitle: "Mastering OAuth: Google, GitHub, & Twitter in Node.js + Angular"
 ogDescription: "Build a unified, secure OAuth system for Google, GitHub, and Twitter. Complete guide with account linking, PKCE, and production best practices."
 ogImage: "/assets/mastering-oauth-google-github-twitter.webp"
@@ -15,7 +56,20 @@ ogType: "article"
 twitterCard: "summary_large_image"
 twitterCreator: "@stackinsightDev"
 section: "Authentication"
-tags: ["node", "angular", "oauth", "security", "typescript"]
+tags:
+  - node
+  - angular
+  - oauth
+  - security
+  - typescript
+
+# Related
+related_posts:
+  - how-to-add-google-github-login-angular-nodejs
+  - 2fa-totp-implementation
+  - angular-saas-starter-journey
+series: "StackInsight Authentication Series"
+series_order: 4
 readTime: 25
 ---
 

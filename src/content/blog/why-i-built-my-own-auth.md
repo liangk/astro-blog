@@ -3,11 +3,50 @@ title: "Why I Refused to Pay Auth0 $96,000/Year (And Built My Own Auth Instead)"
 pubDate: "2026-01-14"
 heroImage: '../../assets/why-i-built-my-own-auth.webp'
 author: "Ko-Hsin Liang"
-categories: ["Authentication", "SaaS", "Business", "Real-World", "Cost Analysis"]
+# Taxonomy
+categories:
+  - Authentication
+  - SaaS
+  - Business
+  - Real-World
+  - Cost Analysis
 repo: "https://github.com/stackinsight/stackinsight-auth-lite"
 description: "Everyone said 'just use Auth0.' Then I saw the $96,000/year price tag. This is the story of why I built my own authentication system instead—and why you might want to consider the same."
 metaDescription: "The real cost of Auth0 and Clerk for SaaS apps. Why I built custom authentication instead of paying $96k/year, and the cold hard numbers behind the decision."
-keywords: ["auth0 pricing", "clerk pricing", "custom authentication", "saas authentication cost", "build vs buy auth", "auth0 alternative", "authentication cost analysis", "vendor lock-in", "auth0 expensive"]
+# SEO
+keywords:
+  - auth0 pricing
+  - clerk pricing
+  - custom authentication
+  - saas authentication cost
+  - build vs buy auth
+  - auth0 alternative
+  - authentication cost analysis
+  - vendor lock-in
+  - auth0 expensive
+
+# AIEO (AI Engine Optimization)
+ai_summary: "A cost-analysis-driven argument for building custom authentication over paying Auth0 or Clerk at scale. Breaks down Auth0's MAU-tiered pricing (25k free, then $35+/month), compares it against self-hosted alternatives, and presents the business case for owning your auth stack in a SaaS context."
+ai_key_facts:
+  - "Auth0 Free plan supports 25,000 MAUs; pricing escalates steeply beyond that threshold"
+  - "Auth0 Essentials plan starts at $35/month for B2C, $150/month for B2B"
+  - "Custom authentication eliminates vendor lock-in and per-MAU cost scaling"
+  - "Building custom auth requires handling refresh token rotation, OAuth flows, and session security correctly"
+  - "The build vs buy decision depends on team size, security expertise, and expected user growth trajectory"
+ai_entities:
+  - "Auth0"
+  - "Clerk"
+  - "JWT"
+  - "OAuth"
+  - "SaaS"
+  - "Node.js"
+  - "Angular"
+
+# Structured Data (Article Schema)
+schema_type: "TechArticle"
+schema_proficiency_level: "Beginner"
+schema_dependencies: "None"
+schema_time_required: "PT20M"
 ogTitle: "I Refused to Pay Auth0 $96K/Year - Here's What I Built Instead"
 ogDescription: "The pricing page said $96,000/year. For authentication. This is why I built my own auth system instead—and the numbers that made the decision obvious."
 ogImage: "/assets/why-i-built-my-own-auth.webp"
@@ -15,7 +54,24 @@ ogType: "article"
 twitterCard: "summary_large_image"
 twitterCreator: "@stackinsightDev"
 section: "SaaS Business"
-tags: ["Authentication", "SaaS", "Pricing", "Auth0", "Clerk", "Cost Analysis", "Build vs Buy", "Vendor Lock-in", "Business Decision"]
+tags:
+  - Authentication
+  - SaaS
+  - Pricing
+  - Auth0
+  - Clerk
+  - Cost Analysis
+  - Build vs Buy
+  - Vendor Lock-in
+  - Business Decision
+
+# Related
+related_posts:
+  - angular-saas-starter-journey
+  - fullstack-authentication-boilerplate
+  - 2fa-totp-implementation
+series: "StackInsight Authentication Series"
+series_order: 1
 readTime: 20
 wordCount: 5100
 canonicalUrl: "https://stackinsight.dev/blog/why-i-built-my-own-auth"

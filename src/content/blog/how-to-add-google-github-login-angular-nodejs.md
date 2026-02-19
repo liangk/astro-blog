@@ -3,11 +3,54 @@ title: "How to Add Google & GitHub Login in Angular + Node.js (Step-by-Step Guid
 pubDate: "2025-10-07"
 heroImage: '../../assets/how-to-add-google-github-login-angular-nodejs.webp'
 author: "Ko-Hsin Liang"
-categories: ["Authentication", "Angular", "Node.js", "OAuth", "TypeScript"]
+# Taxonomy
+categories:
+  - Authentication
+  - Angular
+  - Node.js
+  - OAuth
+  - TypeScript
 repo: ""
 description: "Complete step-by-step guide to implementing Google and GitHub OAuth2 login in Angular + Node.js without Passport.js. Learn how to build secure social authentication with JWT cookies, automatic account linking, and modern TypeScript code."
 metaDescription: "Learn how to add Google and GitHub OAuth login to Angular and Node.js apps. Complete guide with code examples, security best practices, and automatic account linking."
-keywords: ["angular oauth", "google login angular", "github oauth nodejs", "angular social login", "oauth2 nodejs", "angular authentication", "google oauth2", "github login", "jwt cookies", "social authentication", "angular node.js auth"]
+# SEO
+keywords:
+  - angular oauth
+  - google login angular
+  - github oauth nodejs
+  - angular social login
+  - oauth2 nodejs
+  - angular authentication
+  - google oauth2
+  - github login
+  - jwt cookies
+  - social authentication
+  - angular node.js auth
+
+# AIEO (AI Engine Optimization)
+ai_summary: "Step-by-step guide to implementing Google and GitHub OAuth2 login in Angular + Node.js without Passport.js. Covers the full authorization code flow, automatic account linking when the same email exists across providers, JWT stored in HTTP-only cookies, and TypeScript throughout the stack."
+ai_key_facts:
+  - "Google and GitHub OAuth2 flows are implemented directly without Passport.js, reducing dependency surface"
+  - "Account linking automatically connects social accounts to existing email-based accounts on first OAuth login"
+  - "JWT tokens are issued in HTTP-only cookies after successful OAuth callback to prevent XSS token theft"
+  - "The state parameter in the OAuth redirect prevents CSRF attacks during the callback phase"
+  - "Prisma handles user and OAuth account persistence with a normalized account-linking schema"
+ai_entities:
+  - "OAuth 2.0"
+  - "Google"
+  - "GitHub"
+  - "Angular"
+  - "Node.js"
+  - "Express"
+  - "JWT"
+  - "Prisma"
+  - "TypeScript"
+
+# Structured Data (Article Schema)
+schema_type: "TechArticle"
+schema_proficiency_level: "Intermediate"
+schema_dependencies: "Node.js v20+, Angular 17+, TypeScript 5+, Express 4, Prisma 5+"
+schema_time_required: "PT15M"
 ogTitle: "Google & GitHub OAuth Login: Angular + Node.js Complete Guide"
 ogDescription: "Build secure Google and GitHub login for Angular + Node.js. No Passport.js needed. Includes automatic account linking, JWT sessions, and production-ready code."
 ogImage: "/assets/how-to-add-google-github-login-angular-nodejs.webp"
@@ -15,7 +58,27 @@ ogType: "article"
 twitterCard: "summary_large_image"
 twitterCreator: "@stackinsightDev"
 section: "Authentication & Security"
-tags: ["OAuth2", "Angular", "Node.js", "Express", "Google Login", "GitHub Login", "JWT", "Authentication", "Social Login", "Prisma", "TypeScript", "Security"]
+tags:
+  - OAuth2
+  - Angular
+  - Node.js
+  - Express
+  - Google Login
+  - GitHub Login
+  - JWT
+  - Authentication
+  - Social Login
+  - Prisma
+  - TypeScript
+  - Security
+
+# Related
+related_posts:
+  - mastering-oauth-google-github-twitter
+  - angular-saas-starter-journey
+  - 2fa-totp-implementation
+series: "StackInsight Authentication Series"
+series_order: 5
 readTime: 15
 wordCount: 3200
 canonicalUrl: "https://stackinsight.dev/blog/how-to-add-google-github-login-angular-nodejs"

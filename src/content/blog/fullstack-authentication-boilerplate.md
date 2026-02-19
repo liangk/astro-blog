@@ -3,11 +3,51 @@ title: "Modern Fullstack Authentication Boilerplate: Complete Guide 2025"
 pubDate: "2025-09-02"
 heroImage: '../../assets/fullstack-authentication-boilerplate.webp'
 author: "Ko-Hsin Liang"
-categories: ["Authentication", "Angular", "Express", "Security", "TypeScript"]
+# Taxonomy
+categories:
+  - Authentication
+  - Angular
+  - Express
+  - Security
+  - TypeScript
 repo: "https://github.com/liangk/fullstack-auth-boilerplate"
 description: "This document outlines a full-stack authentication boilerplate project available on GitHub, designed to provide a robust starting point for web application development. It details a modern tech stack, including Node.js, Express, Prisma (with PostgreSQL), and JWT for the backend, alongside Angular (with Material UI) for the frontend."
 metaDescription: "Learn how to build secure authentication with Angular, Express, PostgreSQL, and JWT in HTTP-only cookies. Complete fullstack boilerplate with refresh token rotation and TypeScript."
-keywords: ["fullstack authentication", "angular express jwt", "http-only cookies", "refresh token rotation", "postgresql prisma", "secure authentication", "typescript boilerplate", "angular material"]
+# SEO
+keywords:
+  - fullstack authentication
+  - angular express jwt
+  - http-only cookies
+  - refresh token rotation
+  - postgresql prisma
+  - secure authentication
+  - typescript boilerplate
+  - angular material
+
+# AIEO (AI Engine Optimization)
+ai_summary: "A production-ready Angular + Express + PostgreSQL authentication boilerplate using JWT in HTTP-only cookies with refresh token rotation. Covers the full auth stack: registration, login, token refresh, logout, and session invalidation — all without third-party auth services."
+ai_key_facts:
+  - "JWT access tokens are stored in HTTP-only cookies to prevent XSS-based token theft"
+  - "Refresh token rotation invalidates the old refresh token on each use, detecting replay attacks"
+  - "Prisma ORM manages user and session persistence against PostgreSQL"
+  - "Angular Material provides the frontend UI; the backend is Express with TypeScript"
+  - "The boilerplate is available on GitHub as a starting point for Angular SaaS projects"
+ai_entities:
+  - "Angular"
+  - "Express"
+  - "PostgreSQL"
+  - "Prisma"
+  - "JWT"
+  - "HTTP-only Cookies"
+  - "TypeScript"
+  - "Angular Material"
+  - "Node.js"
+
+# Structured Data (Article Schema)
+schema_type: "TechArticle"
+schema_proficiency_level: "Intermediate"
+schema_dependencies: "Node.js v18+, Angular 17+, TypeScript 5+, Express 4, Prisma 5+, PostgreSQL 15+"
+schema_time_required: "PT12M"
 ogTitle: "Modern Fullstack Authentication Boilerplate: Angular + Express + PostgreSQL"
 ogDescription: "Secure, production-ready authentication starter kit with JWT in HTTP-only cookies, refresh token rotation, and end-to-end TypeScript. No third-party auth services needed."
 ogImage: "/assets/fullstack-authentication-boilerplate.webp"
@@ -15,7 +55,26 @@ ogType: "article"
 twitterCard: "summary_large_image"
 twitterCreator: "@stackinsightDev"
 section: "Web Development"
-tags: ["Authentication", "Angular", "Express", "PostgreSQL", "JWT", "TypeScript", "Security", "HTTP-only cookies", "Prisma", "Angular Material", "refresh tokens"]
+tags:
+  - Authentication
+  - Angular
+  - Express
+  - PostgreSQL
+  - JWT
+  - TypeScript
+  - Security
+  - HTTP-only cookies
+  - Prisma
+  - Angular Material
+  - refresh tokens
+
+# Related
+related_posts:
+  - why-i-built-my-own-auth
+  - angular-ssr-netlify-deployment
+  - jwt-storage-cookies-vs-localstorage-which-is-right-for-your-app
+series: "StackInsight Authentication Series"
+series_order: 6
 readTime: 12
 wordCount: 2500
 canonicalUrl: "https://stackinsight.dev/blog/fullstack-authentication-boilerplate"
