@@ -6,7 +6,7 @@ author: "Ko-Hsin Liang"
 repo: "https://github.com/liangk/empirical-study"
 description: "We scanned 500 public React, Vue, and Angular repositories with AST-based static analysis and found 55,864 missing-cleanup patterns — 86% of repos had at least one. Then we benchmarked five common leak scenarios (useEffect listeners, onMounted timers, RxJS subscriptions, Vue watchers, RAF) across 100 mount/unmount cycles with 50 repeats. Every pattern leaked ~8 KB per cycle. This article presents the full data, statistical validation, framework comparison, and one-line fixes."
 excerpt: "Everyone knows you should clean up in useEffect, onUnmounted, and ngOnDestroy. But how many codebases actually do? We scanned 500 repos, benchmarked five leak patterns across 25,000 mount/unmount operations, and turned 'missing cleanup' into a concrete cost: ~8 KB per cycle."
-lastmod: "2026-02-17"
+lastmod: "2026-03-19"
 canonical_url: "https://stackinsight.dev/blog/memory-leak-empirical-study"
 twitter_card: "summary_large_image"
 twitter_site: "@stackinsightDev"
@@ -162,6 +162,8 @@ The same mechanism applies to every framework:
 - **React**: `useEffect` without cleanup → listener/timer/subscription stays alive
 - **Vue**: `onMounted` without `onUnmounted` → timer holds component data; `watch()` without stop handle → watcher registry holds callback
 - **Angular**: `.subscribe()` without `.unsubscribe()` → observable holds subscriber callback; missing `ngOnDestroy` → subscriptions persist
+
+> **Vue 3 automatic cleanup clarification:** Starting with Vue 3.0 (September 2020), watchers created synchronously inside a component's `setup()` function or `<script setup>` are automatically disposed when the component unmounts. This means `watch()` and `watchEffect()` calls in standard component code don't require manual cleanup in most cases. However, memory leaks still occur when watchers are created in **async callbacks**, **standalone functions outside component scope**, or when using **manual timers/listeners** that Vue's reactivity system doesn't track. The benchmark scenarios (SC2, SC4) focus on these edge cases and demonstrate that when automatic cleanup doesn't apply, the leak rate is identical across frameworks (~8 KB/cycle).
 
 This distinction is why our benchmarks force GC before every snapshot. We measure what's **retained** — what GC *cannot* collect — not what's merely *pending* collection.
 
