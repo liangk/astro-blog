@@ -1,0 +1,32 @@
+---
+import BaseHead from '../../../components/BaseHead.astro';
+import Footer from '../../../components/Footer.astro';
+import Header from '../../../components/Header.astro';
+import BlogList from '../../../components/BlogList.astro';
+import { SITE_DESCRIPTION, SITE_TITLE } from '../../../consts';
+import { getBlogPageData } from '../../../lib/blog';
+
+export async function getStaticPaths() {
+	const { totalPages } = await getBlogPageData(1);
+	return Array.from({ length: Math.max(totalPages - 1, 0) }, (_, index) => ({
+		params: { page: String(index + 2) },
+	}));
+}
+
+const page = Number(Astro.params.page ?? 2);
+const { posts, currentPage, totalPages } = await getBlogPageData(page);
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<BaseHead title={`${SITE_TITLE} - Page ${currentPage}`} description={SITE_DESCRIPTION} />
+	</head>
+	<body>
+		<Header />
+		<main>
+			<BlogList posts={posts} currentPage={currentPage} totalPages={totalPages} />
+		</main>
+		<Footer />
+	</body>
+</html>

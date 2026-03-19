@@ -1,21 +1,18 @@
 ---
-import { Image } from 'astro:assets';
-import { getCollection } from 'astro:content';
 import BaseHead from '../../components/BaseHead.astro';
 import Footer from '../../components/Footer.astro';
-import FormattedDate from '../../components/FormattedDate.astro';
 import Header from '../../components/Header.astro';
 import { SITE_DESCRIPTION, SITE_TITLE } from '../../consts';
+import BlogList from '../../components/BlogList.astro';
+import { getBlogPageData } from '../../lib/blog';
 
-const posts = (await getCollection('blog')).sort(
-	(a, b) => a.data.pubDate && b.data.pubDate ? b.data.pubDate?.valueOf() - a.data.pubDate?.valueOf() : 0,
-);
+const { posts, currentPage, totalPages, allPosts } = await getBlogPageData(1);
 ---
 
 <!doctype html>
 <html lang="en">
 	<head>
-		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+		<BaseHead title={currentPage > 1 ? `${SITE_TITLE} - Page ${currentPage}` : SITE_TITLE} description={SITE_DESCRIPTION} />
 		<style lang="scss">
 			main { width: 960px; margin: 0 auto; flex: 1;
 				.blog-toolbar {
@@ -209,104 +206,8 @@ const posts = (await getCollection('blog')).sort(
 	<body>
 		<Header />
 		<main>
-			<section>
-				<div class="blog-toolbar">
-					<div class="search-wrapper">
-						<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
-						<input type="text" id="blog-search" placeholder="Search articles..." />
-					</div>
-					<div class="view-options">
-						<button class="view-btn active" data-view="large" title="Large View">
-							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="3" y1="12" x2="21" y2="12"></line></svg>
-						</button>
-						<button class="view-btn" data-view="grid" title="Grid View">
-							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg>
-						</button>
-						<button class="view-btn" data-view="list" title="List View">
-							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="8" y1="6" x2="21" y2="6"></line><line x1="8" y1="12" x2="21" y2="12"></line><line x1="8" y1="18" x2="21" y2="18"></line><line x1="3" y1="6" x2="3.01" y2="6"></line><line x1="3" y1="12" x2="3.01" y2="12"></line><line x1="3" y1="18" x2="3.01" y2="18"></line></svg>
-						</button>
-					</div>
-				</div>
-				<ul id="blog-posts-list" class="view-large">
-					{
-						posts.map((post) => (
-							<li>
-								<div class="article-wrapper">
-									<a href={`/blog/${post.id}/`} class="main-link"><span class="sr-only">{post.data.title}</span></a>
-									{post.data.heroImage && (
-										<div class="thumbnail">
-											<Image width={720} height={360} src={post.data.heroImage} alt="" />
-										</div>
-									)}
-									<div class="blog-content">
-										<h4 class="title">{post.data.title}</h4>
-										<p class="description">{post.data.description}</p>
-										{post.data.repo && <div class="repo">
-											<a href={post.data.repo} target="_blank">View on GitHub</a>
-										</div>}
-										<p class="date">
-											<FormattedDate date={post.data.pubDate!} />
-										</p>
-									</div>
-								</div>
-							</li>
-						))
-					}
-				</ul>
-			</section>
+			<BlogList posts={posts} currentPage={currentPage} totalPages={totalPages} allPosts={allPosts} />
 		</main>
-		<script>
-			// Search functionality
-			const searchInput = document.getElementById('blog-search') as HTMLInputElement;
-			const list = document.getElementById('blog-posts-list');
-			const posts = list?.querySelectorAll('li');
-
-			searchInput?.addEventListener('input', (e) => {
-				const searchTerm = (e.target as HTMLInputElement).value.toLowerCase();
-				
-				posts?.forEach(post => {
-					const title = post.querySelector('.title')?.textContent?.toLowerCase() || '';
-					const description = post.querySelector('.description')?.textContent?.toLowerCase() || '';
-					
-					if (title.includes(searchTerm) || description.includes(searchTerm)) {
-						post.style.display = '';
-					} else {
-						post.style.display = 'none';
-					}
-				});
-			});
-
-			// View switching functionality
-			const viewBtns = document.querySelectorAll('.view-btn');
-			
-			viewBtns.forEach(btn => {
-				btn.addEventListener('click', () => {
-					// Remove active class from all buttons
-					viewBtns.forEach(b => b.classList.remove('active'));
-					// Add active class to clicked button
-					btn.classList.add('active');
-					
-					// Get view mode
-					const mode = btn.getAttribute('data-view');
-					
-					// Update list class
-					if (list && mode) {
-						list.className = `view-${mode}`;
-						// Save preference
-						localStorage.setItem('blog-view-mode', mode);
-					}
-				});
-			});
-
-			// Load preference
-			const savedMode = localStorage.getItem('blog-view-mode');
-			if (savedMode) {
-				const btn = document.querySelector(`.view-btn[data-view="${savedMode}"]`);
-				if (btn) {
-					(btn as HTMLElement).click();
-				}
-			}
-		</script>
 		<Footer />
 	</body>
 </html>
