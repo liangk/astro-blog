@@ -1,135 +1,57 @@
 ---
-import { getCollection } from 'astro:content';
 import BaseHead from '../../components/BaseHead.astro';
 import Footer from '../../components/Footer.astro';
 import Header from '../../components/Header.astro';
 
-const docs = await getCollection('docs');
-const idMap = new Map(docs.map((d) => [d.id.toLowerCase(), d.id]));
-const hrefFor = (slug: string) => `/docs/${idMap.get(slug.toLowerCase()) ?? slug}`;
-
-const menuStructure = [
+const projects = [
 	{
-		category: 'Getting Started',
-		items: [
-			{ title: 'Quick Start Guide', slug: 'getting-started' },
-			{ title: 'Installation', slug: 'installation' },
-			{ title: 'Environment Configuration', slug: 'environment-configuration' },
-		]
+		name: 'StackInsight Auth Pro',
+		description: 'Authentication setup, API integration, architecture, deployment, and security best practices.',
+		url: '/docs/getting-started',
+		external: false,
 	},
 	{
-		category: 'Core Concepts',
-		items: [
-			{ title: 'Architecture Overview', slug: 'architecture' },
-			{ title: 'Features', slug: 'features' },
-			{ title: 'Authentication Flow', slug: 'authentication-flow' },
-			{ title: 'Security Best Practices', slug: 'security' },
-		]
-	},
-	{
-		category: 'API Documentation',
-		items: [
-			{ title: 'API Reference', slug: 'api-reference' },
-			{ title: 'Authentication Endpoints', slug: 'api-auth' },
-			{ title: 'Dashboard Endpoints', slug: 'api-dashboard' },
-			{ title: 'Error Handling', slug: 'error-handling' },
-		]
-	},
-	{
-		category: 'Frontend',
-		items: [
-			{ title: 'Frontend Architecture', slug: 'frontend-architecture' },
-			{ title: 'Components Guide', slug: 'components' },
-			{ title: 'Services Guide', slug: 'services' },
-			{ title: 'Guards & Interceptors', slug: 'guards-interceptors' },
-			{ title: 'Dashboard Guide', slug: 'dashboard' },
-		]
-	},
-	{
-		category: 'Backend',
-		items: [
-			{ title: 'Backend Architecture', slug: 'backend-architecture' },
-			{ title: 'Controllers', slug: 'controllers' },
-			{ title: 'Middleware', slug: 'middleware' },
-			{ title: 'Database Schema', slug: 'database-schema' },
-			{ title: 'Email Service', slug: 'email-service' },
-		]
-	},
-	{
-		category: 'Development',
-		items: [
-			{ title: 'Development Guide', slug: 'development' },
-			{ title: 'Testing Guide', slug: 'testing' },
-			{ title: 'Code Style Guide', slug: 'code-style' },
-			{ title: 'Docker Guide', slug: 'docker' },
-		]
-	},
-	{
-		category: 'Deployment',
-		items: [
-			{ title: 'Deployment Overview', slug: 'deployment' },
-			{ title: 'Netlify Deployment', slug: 'deploy-netlify' },
-			{ title: 'Render Deployment', slug: 'deploy-render' },
-			{ title: 'Database Setup', slug: 'deploy-database' },
-			{ title: 'Environment Variables (Production)', slug: 'deploy-environment' },
-		]
-	},
-	{
-		category: 'Advanced Topics',
-		items: [
-			{ title: 'Custom Authentication Strategies', slug: 'custom-auth' },
-			{ title: 'Role-Based Access Control', slug: 'rbac' },
-			{ title: 'API Rate Limiting', slug: 'rate-limiting' },
-			{ title: 'Monitoring & Logging', slug: 'monitoring' },
-		]
-	},
-	{
-		category: 'Examples & Tutorials',
-		items: [
-			{ title: 'Example Use Cases', slug: 'examples' },
-			{ title: 'Tutorial: Adding a New Feature', slug: 'tutorial-new-feature' },
-			{ title: 'Tutorial: Custom Email Templates', slug: 'tutorial-email-templates' },
-		]
-	},
-	{
-		category: 'Reference',
-		items: [
-			{ title: 'Troubleshooting', slug: 'troubleshooting' },
-			{ title: 'FAQ', slug: 'faq' },
-			{ title: 'Changelog', slug: 'changelog' },
-			{ title: 'Contributing', slug: 'contributing' },
-		]
+		name: 'Code Evolution Lab',
+		description: 'Static analysis tools, benchmarking methodology, scanner configuration, and result interpretation.',
+		url: 'https://docs.codeevolutionlab.com/',
+		external: true,
 	},
 ];
-
 ---
 
 <!doctype html>
 <html lang="en">
 	<head>
-		<BaseHead title="Documentation" />
+		<BaseHead title="Documentation" description="Documentation for StackInsight Auth Pro and Code Evolution Lab." />
 	</head>
 	<body>
 		<Header />
 		<main>
 			<div class="docs-container">
-				<h1>Documentation</h1>
-				<p class="intro">
-					Complete guide to the StackInsight Auth Lite
-				</p>
+				<div class="header-section">
+					<h1>Documentation</h1>
+					<p class="intro">
+						Comprehensive guides and API references for our open-source projects. 
+						Whether you're implementing authentication or analyzing code quality, 
+						you'll find setup instructions, architecture overviews, and practical examples.
+					</p>
+				</div>
 
-				<div class="menu-sections">
-					{menuStructure.map((section) => (
-						<div class="menu-section">
-							<h2>{section.category}</h2>
-							<ul>
-								{section.items.map((item) => (
-									<li>
-										<a href={hrefFor(item.slug)}>{item.title}</a>
-									</li>
-								))}
-							</ul>
-						</div>
+				<div class="project-list">
+					{projects.map((project) => (
+						<a
+							class="project-card"
+							href={project.url}
+							target={project.external ? '_blank' : undefined}
+							rel={project.external ? 'noopener noreferrer' : undefined}
+						>
+							<div class="card-header">
+								<h2>{project.name}</h2>
+								{project.external && <span class="external-badge">External ↗</span>}
+							</div>
+							<p class="card-description">{project.description}</p>
+							<span class="card-link">View Documentation →</span>
+						</a>
 					))}
 				</div>
 			</div>
@@ -139,27 +61,40 @@ const menuStructure = [
 </html>
 
 <style lang="scss">
-	main { width: 100%; max-width: none; margin: 0; padding: 0; flex: 1; background-color: #fff; }
-	.docs-container { max-width: 900px; margin: 0 auto; padding: 3rem 2rem;
-		h1 { margin: 0 0 0.5rem; color: #1a1a1a; font-size: 2.5rem; }
-		.intro { font-size: 1.1rem; color: #666; margin-bottom: 3rem; }
+	main { width: 100%; max-width: none; margin: 0; padding: 0; flex: 1; background-color: #fafafa; }
+	.docs-container { max-width: 1000px; margin: 0 auto; padding: 4rem 2rem; }
+	.header-section { text-align: center; margin-bottom: 4rem;
+		h1 { margin: 0 0 1rem; color: #1a1a1a; font-size: 2.75rem; font-weight: 700; }
+		.intro { font-size: 1.05rem; color: #555; line-height: 1.7; max-width: 700px; margin: 0 auto; }
 	}
-	.menu-sections { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem;
-		.menu-section {
-			h2 { font-size: 1.2rem; color: #333; margin: 0 0 1rem; padding-bottom: 0.5rem; border-bottom: 2px solid var(--accent); }
-			ul { list-style: none; padding: 0; margin: 0;
-				li { margin-bottom: 0.75rem;
-					a { display: block; padding: 0.5rem 0.75rem; color: #555; text-decoration: none; border-radius: 4px; transition: all 0.2s;
-						&:hover { background: #f5f5f5; color: var(--accent); padding-left: 1rem; }
-					}
-				}
-			}
+	.project-list { display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 2rem; }
+	.project-card { display: flex; flex-direction: column; padding: 2.5rem; background: #fff; border: 1px solid #e5e5e5; border-radius: 12px; text-decoration: none; color: inherit; transition: all 0.25s ease;
+		&:hover { border-color: var(--accent); box-shadow: 0 8px 24px rgba(0,0,0,0.06); transform: translateY(-4px);
+			.card-link { color: var(--accent); }
 		}
+		.card-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;
+			h2 { font-size: 1.5rem; color: #1a1a1a; margin: 0; font-weight: 600; }
+			.external-badge { font-size: 0.75rem; padding: 0.25rem 0.75rem; background: #f0f0f0; color: #666; border-radius: 12px; font-weight: 500; }
+		}
+		.card-description { font-size: 1rem; color: #666; line-height: 1.6; margin: 0 0 1.5rem; flex-grow: 1; }
+		.card-link { font-size: 0.9rem; color: #888; font-weight: 500; transition: color 0.2s; }
 	}
-	@media (max-width: 768px) {
-		.docs-container { padding: 2rem 1rem;
-			h1 { font-size: 2rem; }
+	@media (max-width: 900px) {
+		.docs-container { padding: 3rem 1.5rem; }
+		.header-section {
+			h1 { font-size: 2.25rem; }
 		}
-		.menu-sections { grid-template-columns: 1fr; gap: 2rem; }
+		.project-list { grid-template-columns: 1fr; gap: 1.5rem; }
+		.project-card { padding: 2rem; }
+	}
+	@media (max-width: 640px) {
+		.docs-container { padding: 2rem 1rem; }
+		.header-section { margin-bottom: 3rem;
+			h1 { font-size: 1.9rem; }
+			.intro { font-size: 0.95rem; }
+		}
+		.project-card { padding: 1.75rem;
+			.card-header h2 { font-size: 1.3rem; }
+		}
 	}
 </style>
