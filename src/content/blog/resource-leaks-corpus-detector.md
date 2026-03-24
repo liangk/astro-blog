@@ -1,15 +1,15 @@
 ---
-title: "Resource Leak Patterns in 87.8% of 368 Production Node.js Repositories: A Static Analysis Study"
+title: "Suspected Resource Leak Patterns in 87.8% of 368 Production Node.js Repositories: A Static Analysis Study"
 pubDate: "2026-03-24"
 heroImage: "../../assets/resource-leaks-corpus-detector.webp"
 author: "Ko-Hsin Liang"
 repo: "https://github.com/liangk/empirical-study"
-description: "I scanned 368 Node.js production repositories using a Babel AST detector for six resource leak patterns. 323 of them — 87.8% — had at least one match. 33,625 total findings. The dominant pattern was unclosed event listeners at 57.7%, followed by streams at 20.7% and timers at 14.4%. The fastest-killing leak types in controlled experiments (connection pools: 132 ms median exhaustion, HTTP sockets: 245 ms) appeared in only 7.2% of findings. The leak types that degrade slowly and evade standard heap monitoring dominate real code."
-excerpt: "I scanned 368 production Node.js repositories for six resource leak patterns. 87.8% had at least one. The leak types that fail fastest in controlled experiments are the rarest in production code. The ones that degrade slowly are everywhere."
+description: "I scanned 368 Node.js production repositories using a Babel AST detector for six resource leak patterns. 323 of them — 87.8% — matched at least one suspicious pattern (false positive rate unvalidated). 33,625 total findings. The dominant pattern was unclosed event listeners at 57.7%, followed by streams at 20.7% and timers at 14.4%. The fastest-killing leak types in controlled experiments (connection pools: 132 ms median exhaustion, HTTP sockets: 245 ms) appeared in only 7.2% of findings. The leak types that degrade slowly and evade standard heap monitoring dominate real code."
+excerpt: "I scanned 368 production Node.js repositories for six resource leak patterns. 87.8% matched at least one suspicious pattern (false positive rate unvalidated). The leak types that fail fastest in controlled experiments are the rarest in production code. The ones that degrade slowly are everywhere."
 lastmod: "2026-03-24"
 ai_summary: "Corpus study scanning 368 Node.js production repositories using a Babel AST detector covering six resource leak patterns aligned with benchmark modules BM-01 through BM-06. 323 repositories (87.8%) had at least one finding. Total findings: 33,625. Pattern distribution: unclosed_event_listener 19,385 (57.7%), unclosed_stream 6,950 (20.7%), unclosed_timer 4,835 (14.4%), unclosed_connection 2,225 (6.6%), resource_without_cleanup 197 (0.6%), unclosed_file_handle 33 (0.1%). Severity: medium 24,417, high 9,208. Zero scan errors across all 368 repositories. Key finding: fastest-failing leak types in controlled experiments (connection pools at 132 ms, HTTP sockets at 245 ms) are the least prevalent in production code. Slowest-degrading types (event listeners, streams) dominate. The detector uses Babel AST traversal with per-function-scope WeakMap caching for a single-pass analysis."
 key_takeaways:
-  - "87.8% of 368 scanned Node.js repositories had at least one resource leak pattern."
+  - "87.8% of 368 scanned Node.js repositories matched at least one suspicious resource leak pattern (false positive rate not yet validated against a labeled ground-truth set)."
   - "unclosed_event_listener was the most prevalent at 57.7% of all 33,625 findings."
   - "The fastest-failing leak types in controlled experiments — connections (132 ms) and HTTP sockets (245 ms) — together accounted for only 7.2% of real-world findings."
   - "Top repositories by finding count: mongodb/node-mongodb-native (3,629), ReactiveX/rxjs (2,988), cypress-io/cypress (2,649), bitwarden/clients (2,640)."
@@ -38,7 +38,9 @@ categories:
 series: "Software Reliability Empirical Studies"
 ---
 
-I scanned 368 production Node.js repositories for six resource leak patterns. 323 of them had at least one match. That's 87.8%.
+I scanned 368 production Node.js repositories for six resource leak patterns. 323 of them matched at least one suspicious pattern. That's 87.8%.
+
+*A note on what these numbers mean: all findings are static analysis pattern matches, not confirmed resource leaks. The detector's false positive rate has not been validated against a labeled ground-truth set — that evaluation is planned as Phase 4 of this study. The 33,625 count is simultaneously an upper bound on confirmed true leaks (false positives inflate it) and a lower bound on total real leaks in the corpus (false negatives deflate it). A precision/recall evaluation against a labeled ground-truth set would narrow both toward the actual figure.*
 
 The [previous article in this series](https://stackinsight.dev/blog/resource-leak-scaling-empirical-study) measured how fast each leak type kills a simulated service under load: connection pools in 132 ms, HTTP sockets in 245 ms, file descriptors in 10–25 seconds, timers and event listeners in 600 ms to 25 seconds depending on failure threshold. All controlled discrete-event simulations — parameterized, reproducible, no real OS handles.
 
@@ -48,7 +50,7 @@ This article covers what happens when you apply the same detection logic to real
 
 400 repositories selected across 8 domains: Web APIs, CLI Tools, Database/ORM, File Processing/Build Tools, Real-time/WebSocket, DevOps/Infrastructure, Testing Tools, and Data Processing/Messaging. Selection criteria: ≥100 GitHub stars, JavaScript or TypeScript as the primary language, active maintenance within the last 18 months, server-side or CLI code.
 
-All 368 active repositories in the corpus were scanned in the March 24, 2026 run. Zero scan errors.
+The corpus targets 400 repositories (50 per domain). The corpus parser loaded 368 of them for the March 24, 2026 run; 32 entries were filtered during loading due to format discrepancies, inactive repositories, or placeholder entries added during earlier corpus construction that did not resolve to valid Node.js repositories. Zero scan errors against the loaded 368.
 
 For each repository, the scanner:
 
@@ -74,9 +76,11 @@ The streaming write in step 5 is load-bearing. An earlier implementation accumul
 | `unclosed_file_handle` | 33 | 0.1% | BM-02 | 10.8 s – 21.5 s |
 | **Total** | **33,625** | | | |
 
-By severity: 9,208 high (connections, FDs, streams), 24,417 medium (timers, listeners, resource handles).
+By severity: 9,208 high, 24,417 medium. Severity is assigned by pattern type based on failure mode in the controlled experiments: `unclosed_connection`, `unclosed_file_handle`, and `unclosed_stream` are **high** because they exhaust a hard OS or pool capacity limit (FD ceiling, pool size); `unclosed_timer`, `unclosed_event_listener`, and `resource_without_cleanup` are **medium** because they degrade performance without hitting a hard system boundary.
 
 *(Controlled TTF figures are simulation-time durations from the linked scaling study, not wall-clock measurements.)*
+
+**Finding distribution.** The distribution across repositories is heavily right-skewed. Among the 323 repositories with at least one match: median 25 findings, P90 202 findings. The top 10 repositories account for 16,380 findings — **48.7% of the total** — from 2.7% of the corpus. The distribution implies that a small number of large, event-driven codebases drive the aggregate pattern counts, while the majority of repositories have modest match counts in the single-to-double digits.
 
 ## The Inversion
 
@@ -88,7 +92,7 @@ A connection pool leak fails loudly. Pool has 20 slots, leak rate 10%, concurren
 
 An event listener leak doesn't work that way. `emitter.on('data', handler)` — the listener accumulates. Nothing breaks on the next request, or the one after. The emitter's `_events` object grows by one entry. V8's GC cannot collect the handler because the emitter holds a strong reference. The heap grows by whatever the handler closure captures — 4 KB in the BM-06 benchmark, more in production closures with application state. The `emit('data')` call now invokes N+1 callbacks instead of N. That's an O(N) dispatch. At 1,000 accumulated listeners, emit latency in the BM-06 event-frequency case reached 30 ms per event. Events fired faster than that fanout could drain. Six seconds to complete failure — and on a standard heap dashboard, you're looking at a few megabytes of growth. Nothing alarming.
 
-That survivability is exactly why listener leaks are in 57.7% of the corpus. They don't demand to be fixed. They persist for months, gradually degrading throughput and response latency, until someone instruments carefully enough to notice.
+That survivability pressure is consistent with the inversion — though the same pattern could also reflect base rate differences: EventEmitter and timer APIs are simply used more frequently in Node.js than connection pool APIs, so there are more opportunities for the detector to match. The two explanations are not mutually exclusive, and the data cannot distinguish between them without controlling for how often each resource type appears in the corpus independent of leak patterns. Either way, the failure mode is the same: slow degradation with no hard-limit alarm.
 
 ## Top Repositories
 
@@ -97,7 +101,7 @@ That survivability is exactly why listener leaks are in 57.7% of the corpus. The
 | mongodb/node-mongodb-native | 3,629 | Database/ORM |
 | ReactiveX/rxjs | 2,988 | Data Processing |
 | cypress-io/cypress | 2,649 | Testing Tools |
-| bitwarden/clients | 2,640 | DevOps |
+| bitwarden/clients | 2,640 | Security / Identity† |
 | googleapis/google-cloud-node | 1,030 | DevOps |
 | microsoft/playwright | 969 | Testing Tools |
 | NodeBB/NodeBB | 717 | Real-time |
@@ -105,7 +109,13 @@ That survivability is exactly why listener leaks are in 57.7% of the corpus. The
 | RocketChat/Rocket.Chat | 630 | Real-time |
 | triggerdotdev/trigger.dev | 475 | DevOps |
 
-Finding count correlates with codebase size. `mongodb/node-mongodb-native` has 564 scanned source files and extensive stream and connection handling throughout — exactly the two patterns the detector targets most heavily. `rxjs` has 2,988 matches, almost entirely `unclosed_timer` and `unclosed_event_listener`, which is structurally expected for a reactive programming library where observable lifecycles manage cleanup above the function scope the detector can see.
+†*`bitwarden/clients` is a password manager, not a DevOps tool. The study's eight-domain taxonomy does not include a security category; it was placed in DevOps/Infrastructure as the closest available bucket. The domain label does not affect the findings.*
+
+Finding count correlates with codebase size. `mongodb/node-mongodb-native` has 564 scanned source files and extensive stream and connection handling throughout — exactly the two patterns the detector targets most heavily.
+
+**The RxJS case: a systematic false positive source.** `rxjs` has 2,988 matches, almost entirely `unclosed_timer` and `unclosed_event_listener`. This is a known limitation of function-scope analysis applied to observable-lifecycle libraries: RxJS manages cleanup through `Subscription.unsubscribe()` and `takeUntil()` at an abstraction layer the detector cannot see. The detector correctly identifies that `.on()` / `setInterval()` calls in RxJS internals have no `off()` / `clearInterval()` in the same function scope — it cannot know that the cleanup happens via observable disposal higher up the call chain.
+
+Sensitivity check: removing `rxjs` alone reduces total findings to 30,637 and prevalence to 87.5% (322/368 repos). Removing all six observable-lifecycle libraries in the corpus (`rxjs`, `xstream`, `kefir`, `highland`, `bacon.js`, `most`) reduces findings by 3,251 to 30,374, with prevalence at 86.1% (317/368 repos). The headline finding is robust: 86–88% prevalence regardless of whether you exclude the most plausible systematic false positive category.
 
 The domain-level pattern is consistent. Real-time repos (`socketio/socket.io`: 293, `NodeBB/NodeBB`: 717, `RocketChat/Rocket.Chat`: 630) show heavy event listener and connection counts — they're connection-per-client architectures built on top of EventEmitter. Testing frameworks (`cypress-io/cypress`: 2,649, `microsoft/playwright`: 969) show timer and listener patterns — expected for infrastructure that polls browser state and maintains browser-facing event channels. Build tools (`nrwl/nx`: 392, `pnpm/pnpm`: 86) show stream patterns — file I/O pipelines that create streams for transform operations.
 
@@ -169,13 +179,13 @@ What the detector flags:
 - Resources created and never cleaned up in a self-contained function
 - Timer or listener setup in a function with no corresponding clear/remove
 
-The 33,625 findings are a lower bound. Manual audit of a ground-truth sample would determine the actual false positive rate, which is planned as a follow-on Phase 4 precision/recall evaluation against 50 labeled true positives and 50 labeled true negatives.
+Phase 4 of this study will establish precision and recall against a labeled ground-truth set — 50 confirmed true positives and 50 confirmed true negatives — to quantify how much of the 33,625 is real signal and how much is structural noise from patterns like observable lifecycle management.
 
 ## Mapping to Operational Risk
 
 The controlled experiments established failure times per pattern. Applied to the corpus distributions:
 
-**High operational risk, low prevalence.** Connection leaks (`unclosed_connection`: 2,225 findings, 6.6%) are the fastest-failing pattern — 132 ms median exhaustion at moderate concurrency. Low prevalence suggests they get fixed quickly when they manifest in production.
+**High operational risk, low prevalence.** Connection leaks (`unclosed_connection`: 2,225 findings, 6.6%) are the fastest-failing pattern — 132 ms median exhaustion at moderate concurrency. Low prevalence suggests they get fixed quickly when they manifest in production — or that connection pool code is simply less prevalent in the corpus, though the practical implication is the same either way.
 
 **Moderate operational risk, high prevalence.** Event listener leaks (`unclosed_event_listener`: 19,385 findings, 57.7%) fail through dispatch amplification and event-loop saturation rather than capacity exhaustion. The BM-06 experiments reached failure in 600 ms to 6 s, but the failure signal is emit latency and event-loop lag — metrics most teams don't instrument at all. These leaks survive in production because standard heap monitoring doesn't catch them.
 
@@ -231,6 +241,18 @@ setInterval(() => {
 }, 10_000).unref();
 ```
 
+## What This Means for Prioritization
+
+The central finding — that the fastest-failing leak types are the rarest in production code — has a direct implication for how teams should prioritize.
+
+Don't build your remediation queue by failure speed. Build it by detectability gap.
+
+Connection pool leaks and FD leaks fail loudly: request timeouts, EMFILE crashes, pool-full errors that surface immediately in logs and are hard to ignore. The open work is on the other side of the table: event listener accumulation and timer proliferation, which account for 72% of all matches in this corpus and fail through signals — emit latency, event-loop lag — that most monitoring stacks don't track at all.
+
+The 45 zero-finding repositories are also informative, though a systematic breakdown — by domain, file count, and resource API usage — is deferred to the Phase 4 evaluation. Informally, the correlation between codebase size and match count is visible across the top-repository data; the zero-finding set likely represents the opposite end of that distribution, but that claim needs the data to back it.
+
+The practical question this study can't answer is what fraction of the 33,625 matches are genuine bugs versus intentional long-lived resource patterns. That requires a ground-truth labeled evaluation, which is the next phase. What this study establishes is the floor: these patterns are present at high rates in mature, well-reviewed codebases that ship production software used by millions of developers. Some fraction of them are real bugs. Identifying which ones requires the monitoring instrumentation described in the previous section — not a static analysis tool, but runtime signals that catch actual accumulation.
+
 ## Running the Detector
 
 ```bash
@@ -254,10 +276,12 @@ Sample output:
 
 Files over 1 MB are skipped. `node_modules/`, `dist/`, `build/`, coverage directories, and `.d.ts` files are excluded automatically.
 
-The full corpus findings — 33,625 entries across 368 repositories — can be reproduced locally by cloning the study repository and running `npm run realworld:scan` from `studies/06-resource-leaks/`. The scanner writes `findings-<timestamp>.json` and `prevalence-<timestamp>.json` to the `results/` directory.
+The full corpus findings — 33,625 entries from a scan of 368 repositories (323 contributed at least one finding) — can be reproduced locally by cloning the study repository and running `npm run realworld:scan` from `studies/06-resource-leaks/`. The scanner writes `findings-<timestamp>.json` and `prevalence-<timestamp>.json` to the `results/` directory.
 
 ---
 
 **Study source:** [github.com/liangk/empirical-study](https://github.com/liangk/empirical-study), `studies/06-resource-leaks/`. Previous article: [How Fast Do Node.js Resource Leaks Fail?](https://stackinsight.dev/blog/resource-leak-scaling-empirical-study)
 
-**Want automated resource leak detection in your CI pipeline?** [Code Evolution Lab](https://codeevolutionlab.com) builds static analysis tooling for Node.js and TypeScript teams — including custom AST detectors, performance regression detection, and corpus-scale codebase audits.
+---
+
+*[Code Evolution Lab](https://codeevolutionlab.com) builds static analysis tooling, performance diagnostics, and codebase audits for Node.js and TypeScript teams. If the detector or methodology described here is relevant to your infrastructure, the work is open and the contact is on the site.*
