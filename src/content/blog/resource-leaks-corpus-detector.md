@@ -1,6 +1,7 @@
 ---
 title: "Resource Leak Patterns in 87.8% of 368 Production Node.js Repositories: A Static Analysis Study"
 pubDate: "2026-03-24"
+heroImage: "../../assets/resource-leaks-corpus-detector.webp"
 author: "Ko-Hsin Liang"
 repo: "https://github.com/liangk/empirical-study"
 description: "I scanned 368 Node.js production repositories using a Babel AST detector for six resource leak patterns. 323 of them — 87.8% — had at least one match. 33,625 total findings. The dominant pattern was unclosed event listeners at 57.7%, followed by streams at 20.7% and timers at 14.4%. The fastest-killing leak types in controlled experiments (connection pools: 132 ms median exhaustion, HTTP sockets: 245 ms) appeared in only 7.2% of findings. The leak types that degrade slowly and evade standard heap monitoring dominate real code."
