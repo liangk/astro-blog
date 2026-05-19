@@ -233,7 +233,7 @@ To move beyond theoretical explanations, I ran controlled benchmarks on the vuln
 
 **Benchmark methodology:**
 
-All benchmarks were run on Node.js v24 using `performance.now()` for millisecond-precision timing. Each pattern was tested against a single carefully crafted attack input designed to force maximum backtracking: a long sequence of characters that matches the pattern's prefix but fails only at the very end. Timing is single-run per input size (not averaged) to isolate the worst-case behaviour. The 5-second timeout was enforced using `AbortController` with a `setTimeout` of 5000ms, and patterns that exceeded this limit are marked `5000*` in the tables. Measurements were taken on a standard desktop CPU (Intel Core i9-13900K) running Windows Server 2022; relative speedup ratios are reproducible across machines, but absolute millisecond values will vary by hardware.
+All benchmarks were run on Node.js v24 using `performance.now()` for millisecond-precision timing. Each pattern was tested against a single carefully crafted attack input designed to force maximum backtracking: a long sequence of characters that matches the pattern's prefix but fails only at the very end. Timing is single-run per input size (not averaged) to isolate the worst-case behaviour. The 5-second timeout was enforced using `AbortController` with a `setTimeout` of 5000ms, and patterns that exceeded this limit are marked `5000*` in the tables. Measurements were taken on a mini PC CPU (AMD Ryzen 7 5825U) running Windows 11 Pro; relative speedup ratios are reproducible across machines, but absolute millisecond values will vary by hardware.
 
 **BM-01: Nested quantifiers (/(a*)*$/ vs /a*$/)**
 
