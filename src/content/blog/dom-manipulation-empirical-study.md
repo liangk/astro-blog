@@ -514,3 +514,15 @@ Run the detector on your codebase. Check your loops. Batch your writes. Your use
 | DOM query benchmark | Repeated same-element queries (same ID per iteration) |
 
 All raw benchmark data with per-trial distributions and finding JSON files are available in the [empirical-study results directory](https://github.com/liangk/empirical-study/tree/main/studies/08-dom-manipulation/results).
+
+---
+
+## Detect DOM manipulation anti-patterns in your codebase
+
+The patterns documented in this study — DOM operations inside loops, forced synchronous layout reads after style writes, `innerHTML` with user-controlled input, `document.write` usage, and repeated `querySelector` calls inside loops — are automatically detected by [Code Evolution Lab](https://codeevolutionlab.com). The `DOMManipulationDetector` includes XSS detection for user-input flows into `innerHTML`, in addition to the performance-focused checks.
+
+[**Scan your repository free → codeevolutionlab.com**](https://codeevolutionlab.com)
+
+---
+
+*Built at [Stack Insight](https://stackinsight.dev).*

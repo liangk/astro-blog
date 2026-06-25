@@ -2,17 +2,20 @@
 import BaseHead from '../../components/BaseHead.astro';
 import Footer from '../../components/Footer.astro';
 import Header from '../../components/Header.astro';
-import { SITE_DESCRIPTION, SITE_TITLE } from '../../consts';
+import { SITE_TITLE } from '../../consts';
 import BlogList from '../../components/BlogList.astro';
 import { getBlogPageData } from '../../lib/blog';
 
 const { posts, currentPage, totalPages, allPosts } = await getBlogPageData(1);
+
+const PAGE_TITLE = 'Performance Research & Empirical Studies — StackInsight';
+const PAGE_DESCRIPTION = 'Empirical studies on memory leaks, N+1 queries, blocking I/O, loop performance, missing indexes, and other JavaScript and TypeScript performance anti-patterns. Each article combines large-scale repository scans with controlled benchmarks.';
 ---
 
 <!doctype html>
 <html lang="en">
 	<head>
-		<BaseHead title={currentPage > 1 ? `${SITE_TITLE} - Page ${currentPage}` : SITE_TITLE} description={SITE_DESCRIPTION} />
+		<BaseHead title={currentPage > 1 ? `${PAGE_TITLE} — Page ${currentPage}` : PAGE_TITLE} description={PAGE_DESCRIPTION} />
 		<style lang="scss">
 			main { width: 960px; margin: 0 auto; flex: 1;
 				.blog-toolbar {

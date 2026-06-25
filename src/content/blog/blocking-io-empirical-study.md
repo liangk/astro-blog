@@ -567,4 +567,12 @@ All code, data, and results are in the [empirical-study](https://github.com/lian
 
 ---
 
+## Detect blocking I/O in your codebase
+
+The synchronous call patterns documented in this study — `readFileSync`, `execSync`, `pbkdf2Sync`, and 23 others — are automatically detected by [Code Evolution Lab](https://codeevolutionlab.com). The `BlockingIODetector` classifies each finding by context (request handler, startup, tooling, background) and assigns severity based on whether the call is inside a loop or a hot path, so you can prioritise the 280× problems before the 1.7× ones.
+
+[**Scan your repository free → codeevolutionlab.com**](https://codeevolutionlab.com)
+
+---
+
 *Built at [Stack Insight](https://stackinsight.dev).*

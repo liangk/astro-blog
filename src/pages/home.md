@@ -1,39 +1,53 @@
 ---
-title: "StackInsight Developer Hub"
-description: "Tutorials, empirical studies, and open-source tools for full-stack developers — covering authentication, performance, and code quality."
+title: "StackInsight — Empirical Performance Research for JavaScript and TypeScript"
+description: "Large-scale empirical studies on performance anti-patterns in real-world JavaScript and TypeScript codebases, with controlled benchmarks and an open-source detection tool."
 ---
 
-# StackInsight Developer Hub
+# StackInsight
 
-We build developer tools and write about what we learn along the way.  
-This site is home to our tutorials, empirical studies, and documentation for two open-source projects.
+Empirical research on code performance and quality for JavaScript and TypeScript developers. Each study combines large-scale repository analysis with controlled benchmarks to produce verified, reproducible findings.
+
+[**Scan your repository with Code Evolution Lab →**](https://codeevolutionlab.com)
 
 ---
 
-## Our Projects
+## Research at a Glance
 
-### StackInsight Auth Pro
+| | |
+|---|---|
+| Empirical studies published | 11 |
+| Detection rules derived from research | 16 |
+| Repositories scanned (memory leak study) | 500 |
+| Prevalence of missing-cleanup patterns | 86% of repositories |
+| Total findings (memory leak study) | 55,864 across 714,217 files |
+| Nested loop speedup vs. Map lookup at n = 10,000 | 64× |
 
-Production-ready authentication for full-stack applications — role management, session handling, and enterprise-grade security out of the box.
+---
 
-- [**App** → app.stackinsight.app](https://app.stackinsight.app)
-- [**Docs** → stackinsight.dev/docs](/docs)
-- [**GitHub** → stackinsight/stackinsight-auth-lite](https://github.com/stackinsight/stackinsight-auth-lite)
+## Code Evolution Lab
 
-### Code Evolution Lab
-
-Static analysis and benchmarking tools for measuring real-world code quality — memory leaks, resource leaks, missing indexes, and more.
+A static analysis tool for JavaScript and TypeScript codebases, built directly from the findings of this research. Code Evolution Lab detects N+1 queries, memory leaks, missing database indexes, inefficient loops, and 12 additional anti-patterns using Babel AST and Prisma schema analysis.
 
 - [**App** → codeevolutionlab.com](https://codeevolutionlab.com)
-- [**Docs** → docs.codeevolutionlab.com](https://docs.codeevolutionlab.com/)
+- [**Documentation** → docs.codeevolutionlab.com](https://docs.codeevolutionlab.com/)
 - [**GitHub** → liangk/code-evolution-lab](https://github.com/liangk/code-evolution-lab)
 
 ---
 
-## Tutorials & Articles
+## Empirical Studies
 
-We publish technical guides and empirical studies grounded in real data — no fluff, lots of code.
+Each study is structured in two phases: a corpus scan measuring the prevalence of a target pattern across real open-source repositories, followed by a controlled benchmark quantifying the performance cost of that pattern under varying load conditions. All methodology, raw data, and benchmark source code are published alongside each article.
 
-Recent work has focused on large-scale repository analysis using Code Evolution Lab: scanning hundreds of open-source projects for memory leaks, resource leaks, and performance anti-patterns, then benchmarking the actual cost of each pattern.
+[**Browse all studies and articles →**](/blog)
 
-Browse all articles in the [**Blog**](/blog) section.
+---
+
+## Other Projects
+
+### StackInsight Auth Pro
+
+Production-ready authentication for full-stack applications, covering role management, session handling, and enterprise-grade security.
+
+- [**App** → app.stackinsight.app](https://app.stackinsight.app)
+- [**Documentation** → stackinsight.dev/docs](/docs)
+- [**GitHub** → stackinsight/stackinsight-auth-lite](https://github.com/stackinsight/stackinsight-auth-lite)

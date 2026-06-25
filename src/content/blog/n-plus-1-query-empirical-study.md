@@ -366,4 +366,16 @@ The bottom line: the N+1 problem isn't a theoretical concern you can defer. It's
 
 ---
 
-*The benchmark suite and raw data are on [GitHub](https://github.com/liangk/empirical-study). Built at [Stack Insight](https://stackinsight.dev).*
+*The benchmark suite and raw data are on [GitHub](https://github.com/liangk/empirical-study).*
+
+---
+
+## Detect N+1 queries in your codebase
+
+The patterns benchmarked in this study — database calls inside loops, missing `include` directives, redundant `findUnique` calls — are automatically detected by [Code Evolution Lab](https://codeevolutionlab.com). The `N1QueryDetector` supports Prisma, Sequelize, TypeORM, Mongoose, and Knex, and flags findings by severity based on query count and nesting depth.
+
+[**Scan your repository free → codeevolutionlab.com**](https://codeevolutionlab.com)
+
+---
+
+*Built at [Stack Insight](https://stackinsight.dev).*

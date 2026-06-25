@@ -281,3 +281,15 @@ For readers interested in reproducing or extending this work:
 ## The Takeaway
 
 Caching opportunities are easier to spot than they look. Start by asking: "Is this the same work being done twice?" If yes, caching is not optional. It is the natural fix. The better answer is usually not more infrastructure. It is better reuse inside the request flow.
+
+---
+
+## Detect missing caching opportunities in your codebase
+
+The patterns documented in this study — repeated expensive function calls within the same scope, repeated HTTP fetches with identical URLs, repeated database queries with identical arguments, and memoization opportunities in render functions — are automatically detected by [Code Evolution Lab](https://codeevolutionlab.com). The `MissingCachingDetector` identifies pure functions without memoization, repeated `findAll`/`findMany` calls, and API requests in high-frequency contexts that lack cache identifiers.
+
+[**Scan your repository free → codeevolutionlab.com**](https://codeevolutionlab.com)
+
+---
+
+*Built at [Stack Insight](https://stackinsight.dev).*

@@ -745,4 +745,12 @@ All code, data, and results are in the [empirical-study](https://github.com/lian
 
 ---
 
+## Detect loop anti-patterns in your codebase
+
+The patterns benchmarked in this study — nested loops that should use `Map` or `Set` lookups, `JSON.parse` inside loops, `Array.includes()` inside loops, sequential `await` on independent requests, and string concatenation with `+=` — are automatically detected by [Code Evolution Lab](https://codeevolutionlab.com). The `InefficientLoopDetector` covers 12 rule types and flags findings by severity, distinguishing O(n²) algorithmic issues (critical) from constant-factor issues (medium).
+
+[**Scan your repository free → codeevolutionlab.com**](https://codeevolutionlab.com)
+
+---
+
 *Built at [StackInsight](https://stackinsight.dev).*

@@ -485,3 +485,15 @@ ReDoS is not a theoretical hazard—this study produced measurable evidence that
 For developers: start with the tools section. Integrate `safe-regex` or `eslint-plugin-regexp` into your CI today. For maintainers of affected libraries: run the triage checklist on your highest-risk patterns. For security researchers: this study creates a baseline for future work on finer-grained detection, false-positive reduction, and Node.js-specific mitigation strategies.
 
 The practical insight from this round: turn detection into action through measurement. A regex that passes your own timeout test is safer than one that does not. Use that principle, and you will reduce the risk surface significantly.
+
+---
+
+## Detect ReDoS vulnerabilities in your codebase
+
+The dangerous regex patterns documented in this study — nested quantifiers like `(a+)+` and `(.*)+`, overlapping alternatives, and high-complexity patterns applied to user-controlled input — are automatically detected by [Code Evolution Lab](https://codeevolutionlab.com). The `ReDoSDetector` analyses both regex literals and `new RegExp()` calls, scores complexity based on quantifier count and group nesting, and flags patterns applied to `req.body`, `req.query`, or `req.params` as critical severity.
+
+[**Scan your repository free → codeevolutionlab.com**](https://codeevolutionlab.com)
+
+---
+
+*Built at [Stack Insight](https://stackinsight.dev).*

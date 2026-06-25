@@ -532,4 +532,16 @@ If you want these checks running automatically on your codebase, check out [Code
 
 ---
 
-*The benchmark suite, static detector, and raw data are on [GitHub](https://github.com/liangk/empirical-study). Built at [StackInsight](https://stackinsight.dev).*
+*The benchmark suite, static detector, and raw data are on [GitHub](https://github.com/liangk/empirical-study).*
+
+---
+
+## Detect missing indexes in your Prisma schema
+
+The missing-index patterns documented in this study — unindexed foreign key columns, missing `createdAt`/`updatedAt` sort indexes, and incomplete composite indexes for multi-field `WHERE` clauses — are automatically detected by [Code Evolution Lab](https://codeevolutionlab.com). The `MissingIndexDetector` inspects both Prisma schema files and ORM query patterns in TypeScript source, covering `findAll`, `findMany`, `findFirst`, and raw SQL calls.
+
+[**Scan your repository free → codeevolutionlab.com**](https://codeevolutionlab.com)
+
+---
+
+*Built at [Stack Insight](https://stackinsight.dev).*

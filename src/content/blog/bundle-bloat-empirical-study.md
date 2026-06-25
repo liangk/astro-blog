@@ -527,4 +527,12 @@ All code, data, and results are in the [empirical-study](https://github.com/lian
 
 ---
 
+## Detect bundle bloat in your codebase
+
+The patterns documented in this study — heavy dependencies with lighter alternatives, namespace imports from tree-shakeable packages, unused imports, and dynamic import opportunities — are automatically detected by [Code Evolution Lab](https://codeevolutionlab.com). The `BundleSizeDetector` covers 16 known heavy packages including moment, lodash, jQuery, and rxjs, and flags namespace imports from any tree-shakeable library.
+
+[**Scan your repository free → codeevolutionlab.com**](https://codeevolutionlab.com)
+
+---
+
 *Built at [Stack Insight](https://stackinsight.dev).*

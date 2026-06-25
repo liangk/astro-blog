@@ -384,4 +384,12 @@ Everything for this study is in the empirical-study repository:
 
 ---
 
+## Detect large payload patterns in your codebase
+
+The patterns documented in this study — API responses from database queries without field selection or pagination limits, `findAll`/`findMany` without `attributes`/`select` or `limit`/`take`, and functions returning unbounded result sets — are automatically detected by [Code Evolution Lab](https://codeevolutionlab.com). The `LargePayloadDetector` tracks data flow from ORM calls to `res.json()` and flags missing field selection and pagination at the point of the API response.
+
+[**Scan your repository free → codeevolutionlab.com**](https://codeevolutionlab.com)
+
+---
+
 *Built at [Stack Insight](https://stackinsight.dev).*

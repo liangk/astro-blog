@@ -3,7 +3,6 @@ import BaseHead from '../../components/BaseHead.astro';
 import Footer from '../../components/Footer.astro';
 import Header from '../../components/Header.astro';
 import BlogList from '../../components/BlogList.astro';
-import { SITE_DESCRIPTION, SITE_TITLE } from '../../consts';
 import { getBlogPageData } from '../../lib/blog';
 
 export async function getStaticPaths() {
@@ -15,12 +14,15 @@ export async function getStaticPaths() {
 
 const page = Number(Astro.params.page);
 const { posts, currentPage, totalPages, allPosts } = await getBlogPageData(page);
+
+const PAGE_TITLE = `Performance Research & Empirical Studies — Page ${currentPage} — StackInsight`;
+const PAGE_DESCRIPTION = 'Empirical studies on memory leaks, N+1 queries, blocking I/O, loop performance, missing indexes, and other JavaScript and TypeScript performance anti-patterns. Each article combines large-scale repository scans with controlled benchmarks.';
 ---
 
 <!doctype html>
 <html lang="en">
 	<head>
-		<BaseHead title={`${SITE_TITLE} - Page ${currentPage}`} description={SITE_DESCRIPTION} />
+		<BaseHead title={PAGE_TITLE} description={PAGE_DESCRIPTION} />
 	</head>
 	<body>
 		<Header />

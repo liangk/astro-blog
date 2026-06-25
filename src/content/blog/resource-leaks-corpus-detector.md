@@ -285,3 +285,15 @@ The full corpus findings — 33,625 entries from a scan of 368 repositories (323
 ---
 
 *[Code Evolution Lab](https://codeevolutionlab.com) builds static analysis tooling, performance diagnostics, and codebase audits for Node.js and TypeScript teams. If the detector or methodology described here is relevant to your infrastructure, the work is open and the contact is on the site.*
+
+---
+
+## Detect resource leaks in your codebase
+
+The 33,625 findings from this corpus scan were produced by the same detection logic that runs in [Code Evolution Lab](https://codeevolutionlab.com). The `ResourceLeaksDetector` checks for unclosed database connections, streams, file handles, WebSockets, EventSource, Worker, and AbortController instances, and verifies that each has a corresponding cleanup call or is wrapped in a `try-finally` or `using` declaration.
+
+[**Scan your repository free → codeevolutionlab.com**](https://codeevolutionlab.com)
+
+---
+
+*Built at [Stack Insight](https://stackinsight.dev).*

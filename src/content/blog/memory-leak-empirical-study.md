@@ -862,4 +862,12 @@ All code, data, and results are in the [empirical-study](https://github.com/lian
 
 ---
 
+## Detect memory leaks in your codebase
+
+The missing-cleanup patterns documented in this study — `useEffect` without cleanup returns, `addEventListener` without `removeEventListener`, `setInterval` without `clearInterval`, `.subscribe()` without `.unsubscribe()`, and RAF without cancel — are automatically detected by [Code Evolution Lab](https://codeevolutionlab.com). The `MemoryLeakDetector` is framework-aware across React, Vue, and Angular, and classifies findings by context and severity.
+
+[**Scan your repository free → codeevolutionlab.com**](https://codeevolutionlab.com)
+
+---
+
 *Built at [Stack Insight](https://stackinsight.dev).*
