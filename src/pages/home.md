@@ -40,14 +40,3 @@ Each study is structured in two phases: a corpus scan measuring the prevalence o
 
 [**Browse all studies and articles →**](/blog)
 
----
-
-## Other Projects
-
-### StackInsight Auth Pro
-
-Production-ready authentication for full-stack applications, covering role management, session handling, and enterprise-grade security.
-
-- [**App** → app.stackinsight.app](https://app.stackinsight.app)
-- [**Documentation** → stackinsight.dev/docs](/docs)
-- [**GitHub** → stackinsight/stackinsight-auth-lite](https://github.com/stackinsight/stackinsight-auth-lite)

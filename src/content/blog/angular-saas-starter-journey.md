@@ -34,7 +34,6 @@ ai_key_facts:
   - "Magic link and passwordless flows require secure token generation, short expiry, and single-use invalidation"
   - "TOTP 2FA with backup codes adds another full layer of state management to the auth flow"
   - "JWT in HTTP-only cookies with refresh token rotation is the foundation for all auth methods in the system"
-  - "The finished system was packaged as StackInsight Auth Pro to save other developers the same 3 months"
 ai_entities:
   - "Angular"
   - "OAuth"
@@ -679,6 +678,8 @@ This knowledge doesn't just apply to auth—it shapes how you think about securi
 
 ## Ready to Skip the 3-Month Journey?
 
+> **Note:** StackInsight Auth Pro is no longer available.
+
 **StackInsight Auth Pro** gives you everything I built, fully documented and ready to deploy.
 
 **What you get:**
@@ -701,8 +702,6 @@ This knowledge doesn't just apply to auth—it shapes how you think about securi
 - The frustration of "this should be easy"
 
 **Start building your SaaS today, not in 3 months.**
-
-👉 **[Get StackInsight Auth Pro at stackinsight.app](https://stackinsight.app)**
 
 ---
 

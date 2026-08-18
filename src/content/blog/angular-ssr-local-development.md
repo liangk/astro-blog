@@ -82,8 +82,6 @@ canonicalUrl: "https://stackinsight.dev/blog/angular-ssr-local-development"
 
 **Last updated**: November 2025 | Angular 20.2+ | Node.js 20
 
-> 💡 **Note**: This guide is based on production implementations. For a complete, production-ready Angular SSR authentication boilerplate, check out [StackInsight Auth Pro](https://stackinsight.app).
-
 ---
 
 ## The Local Development Dilemma
@@ -1198,10 +1196,6 @@ With local SSR working, you're ready to:
 - **[Part 1: Netlify Deployment](./part1_angular_ssr_netlify_deployment.md)** - Deploy to production
 
 ---
-
-> **Skip the Boilerplate with StackInsight Auth Pro**  
-> If you want this honest SSR dev setup *and* a production-ready auth stack, check out **StackInsight Auth Pro** — a production-ready Angular 20 SSR + httpOnly cookie authentication starter. It packages the patterns from this guide into a ready-to-run project so you can focus on your product, not wiring.  
-> Learn more at [stackinsight.app](https://stackinsight.app)
 
 **Questions or feedback?** Reach out via [contact form](https://stackinsight.dev/contact) or [@stackinsightDev](https://x.com/StackInsightDev)
 

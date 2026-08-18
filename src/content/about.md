@@ -11,14 +11,6 @@ StackInsight.dev is where we share what we build and what we learn — tutorials
 
 ## Projects
 
-### StackInsight Auth Pro
-
-Production-ready authentication for full-stack applications. Role management, session handling, and enterprise-grade security.
-
-- [App → app.stackinsight.app](https://app.stackinsight.app)
-- [Docs → stackinsight.dev/docs](/docs)
-- [GitHub → stackinsight/stackinsight-auth-lite](https://github.com/stackinsight/stackinsight-auth-lite)
-
 ### Code Evolution Lab
 
 Static analysis and benchmarking tools for measuring code quality at scale — memory leaks, resource leaks, missing indexes, and more.

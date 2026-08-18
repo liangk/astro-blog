@@ -79,8 +79,6 @@ readTime: 25
 
 **Last updated**: December 2025 | Angular 20.2+ | Node.js 20
 
-> 💡 **Note**: This guide implements a robust, unified OAuth system. For a complete, production-ready authentication starter that includes this OAuth implementation along with email/password auth, check out [StackInsight Auth Pro](https://stackinsight.app).
-
 ---
 
 Building a modern authentication system? Your users expect the convenience of "Continue with Google" or "Continue with GitHub." But implementing multiple providers while keeping your codebase clean can be a nightmare of spaghetti code.
@@ -533,12 +531,6 @@ You now have a unified, extensible OAuth system. The beauty of this architecture
 - [Google OAuth Documentation](https://developers.google.com/identity/protocols/oauth2)
 - [GitHub OAuth Documentation](https://docs.github.com/en/developers/apps/building-oauth-apps)
 - [Twitter OAuth 2.0 Documentation](https://developer.twitter.com/en/docs/authentication/oauth-2-0)
-
----
-
-> **Skip the boilerplate with StackInsight Auth Pro**  
-> Want this complete OAuth implementation *and* a production-ready auth stack? **StackInsight Auth Pro** is a complete Angular 20 SSR + httpOnly cookie starter with Google, GitHub, and Twitter OAuth built in. It turns everything in this guide into a ready-to-run codebase so you can focus on your product, not the wiring.  
-> Learn more at [stackinsight.app](https://stackinsight.app)
 
 ---
 
