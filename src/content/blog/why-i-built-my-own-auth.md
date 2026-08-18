@@ -484,6 +484,8 @@ It's the technical roadmap I wish I had when I started. **Sign up below to get n
 
 ### Or Skip Straight to Production
 
+> **Note:** StackInsight Auth Pro is no longer available.
+
 **StackInsight Auth Pro** is my battle-tested implementation, ready to deploy:
 - ✅ Complete source code (15,000+ lines)
 - ✅ All authentication methods (email, OAuth, 2FA, magic links, passwordless)
@@ -582,6 +584,8 @@ That's a pretty good hourly rate.
 
 Don't want to spend 3 weeks building what I built? I get it.
 
+> **Note:** StackInsight Auth Pro is no longer available.
+
 **StackInsight Auth Pro** is the production-ready version of everything I described in this article:
 
 **What you get:**
@@ -606,8 +610,6 @@ Don't want to spend 3 weeks building what I built? I get it.
 - ✅ The frustration of vendor lock-in
 
 **Own the code. Deploy anywhere. Customize everything. Pay once.**
-
-👉 **[Get StackInsight Auth Pro at stackinsight.app](https://stackinsight.app)**
 
 ---
 

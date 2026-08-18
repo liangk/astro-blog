@@ -1419,10 +1419,6 @@ With local SSR working on Angular 21:
 
 ---
 
-> **Skip the Boilerplate with StackInsight**
-> If you want this Angular 21 SSR dev setup pre-wired with production-ready auth, check out the StackInsight starter — it packages the patterns from this guide into a ready-to-run project.
-> Learn more at [stackinsight.app](https://stackinsight.app)
-
 **Questions or feedback?** Reach out via [contact form](https://stackinsight.dev/contact) or [@stackinsightDev](https://x.com/StackInsightDev)
 
 ---

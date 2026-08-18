@@ -779,8 +779,3 @@ You now have production-ready 2FA with TOTP! Key features:
 - [TOTP RFC 6238](https://tools.ietf.org/html/rfc6238)
 - [angularx-qrcode](https://github.com/cordobo/angularx-qrcode)
 
----
-
-> **Skip the boilerplate with StackInsight Auth Pro**  
-> Want this full 2FA setup plus a production-ready auth stack? **StackInsight Auth Pro** is a complete Angular 20 SSR + httpOnly cookie starter with TOTP 2FA built in. It turns everything in this guide into a ready-to-run codebase so you can focus on your product, not the wiring.  
-> Learn more at [stackinsight.app](https://stackinsight.app)
