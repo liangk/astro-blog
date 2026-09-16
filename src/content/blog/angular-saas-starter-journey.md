@@ -10,7 +10,7 @@ categories:
   - SaaS
   - Real-World
   - Security
-repo: "https://github.com/stackinsight/stackinsight-auth-lite"
+repo: "https://github.com/liangk/fullstack-auth-boilerplate"
 description: "Three months. 15,000+ lines of code. More edge cases than I thought possible. This is the unfiltered story of building production-ready authentication for Angular SaaS apps—and why you shouldn't have to do this yourself."
 metaDescription: "The real story of building complete authentication: email/password, OAuth (Google, GitHub, Twitter), 2FA, magic links, and passwordless. Three months of work so you don't have to."
 # SEO
@@ -87,7 +87,7 @@ canonicalUrl: "https://stackinsight.dev/blog/angular-saas-starter-journey"
 **Month 2:** "I'm only halfway done. How is that possible?"  
 **Month 3:** "Oh. *This* is why Auth0 charges $8,000/month."
 
-This is the story of building **StackInsight Auth Pro**—a complete, production-ready authentication system for Angular SaaS applications. Three months of full-time work. 15,000+ lines of code. More edge cases than I ever imagined existed. And one crystal-clear realization: **you shouldn't have to do this yourself**.
+This is the story of building a complete, production-ready authentication system for Angular SaaS applications. Three months of full-time work. 15,000+ lines of code. More edge cases than I ever imagined existed. And one crystal-clear realization: **you shouldn't have to do this yourself**.
 
 *Last updated: January 18, 2026 | Angular 20, Node.js 20, Tested in production*
 
@@ -639,22 +639,7 @@ After building this, I finally understood why auth services charge premium price
 
 I spent 3 months building this so you don't have to.
 
-**StackInsight Auth Pro** is the complete, production-ready authentication system I wish I had when I started. It includes:
-
-- ✅ Everything I built (all features above)
-- ✅ Angular 20 frontend (fully responsive, beautiful UI)
-- ✅ Node.js/Express backend (TypeScript, fully typed)
-- ✅ PostgreSQL database (Prisma ORM)
-- ✅ Docker setup (one command to run everything)
-- ✅ Deployment guides (Vercel, Render, Neon)
-- ✅ Complete documentation (every decision explained)
-- ✅ Test suite (87% coverage)
-
-**More importantly:**
-- ✅ All the edge cases handled
-- ✅ All the security considerations addressed
-- ✅ All the mistakes already made (and fixed)
-- ✅ All the lessons learned (and documented)
+Every edge case above, every security decision, every mistake I made and then fixed — it's all written down here. That's the part no pricing page gives you.
 
 ---
 
@@ -673,35 +658,6 @@ This knowledge doesn't just apply to auth—it shapes how you think about securi
 **The bottom line:** You can use Auth0 and save time. Or you can build your own and gain understanding. Both are valid choices with different trade-offs.
 
 *Need help deciding?* Read the [complete cost analysis and decision framework](/blog/why-i-built-my-own-auth) comparing Auth0, Clerk, and custom auth.
-
----
-
-## Ready to Skip the 3-Month Journey?
-
-> **Note:** StackInsight Auth Pro is no longer available.
-
-**StackInsight Auth Pro** gives you everything I built, fully documented and ready to deploy.
-
-**What you get:**
-- Complete source code (15,000+ lines)
-- Angular 20 frontend
-- Node.js/Express backend
-- All authentication methods (email, OAuth, 2FA, magic links, passwordless)
-- Session management
-- Rate limiting
-- Security hardening
-- Docker setup
-- Deployment guides
-- Lifetime updates
-
-**What you save:**
-- 3 months of development time
-- Countless hours debugging edge cases
-- Weeks of security research
-- Days of documentation writing
-- The frustration of "this should be easy"
-
-**Start building your SaaS today, not in 3 months.**
 
 ---
 

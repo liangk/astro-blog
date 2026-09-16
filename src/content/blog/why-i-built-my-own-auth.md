@@ -10,7 +10,7 @@ categories:
   - Business
   - Real-World
   - Cost Analysis
-repo: "https://github.com/stackinsight/stackinsight-auth-lite"
+repo: "https://github.com/liangk/fullstack-auth-boilerplate"
 description: "Everyone said 'just use Auth0.' Then I saw the $96,000/year price tag. This is the story of why I built my own authentication system instead—and why you might want to consider the same."
 metaDescription: "The real cost of Auth0 and Clerk for SaaS apps. Why I built custom authentication instead of paying $96k/year, and the cold hard numbers behind the decision."
 # SEO
@@ -482,20 +482,6 @@ I've documented my complete 3-month authentication journey with:
 
 It's the technical roadmap I wish I had when I started. **Sign up below to get notified when it's published.**
 
-### Or Skip Straight to Production
-
-> **Note:** StackInsight Auth Pro is no longer available.
-
-**StackInsight Auth Pro** is my battle-tested implementation, ready to deploy:
-- ✅ Complete source code (15,000+ lines)
-- ✅ All authentication methods (email, OAuth, 2FA, magic links, passwordless)
-- ✅ Angular 20 frontend + Node.js backend
-- ✅ Docker setup & deployment guides
-- ✅ 87% test coverage
-- ✅ Lifetime updates
-
-**One-time cost. Own the code. Zero recurring fees.**
-
 ---
 
 ## My Recommendation
@@ -577,39 +563,6 @@ Let me show you my actual dashboard:
 **Cost per hour of maintenance:** $1,761 saved per hour spent
 
 That's a pretty good hourly rate.
-
----
-
-## Want My Complete Auth System?
-
-Don't want to spend 3 weeks building what I built? I get it.
-
-> **Note:** StackInsight Auth Pro is no longer available.
-
-**StackInsight Auth Pro** is the production-ready version of everything I described in this article:
-
-**What you get:**
-- ✅ Complete source code (15,000+ lines)
-- ✅ Angular 20 SSR frontend (beautiful, responsive UI)
-- ✅ Node.js/Express backend (TypeScript, fully typed)
-- ✅ All authentication methods (email, OAuth, 2FA, magic links, passwordless)
-- ✅ Multi-tenancy & RBAC (organizations, roles, permissions)
-- ✅ Session management (see all devices, logout remotely)
-- ✅ Rate limiting & security hardening
-- ✅ Docker setup (one command deployment)
-- ✅ Deployment guides (Vercel, Render, Neon)
-- ✅ Complete documentation (every decision explained)
-- ✅ Test suite (87% coverage)
-- ✅ Lifetime updates
-
-**What you save:**
-- ✅ 3 weeks of development time
-- ✅ $96,000/year in Auth0 costs (at 50k users)
-- ✅ Countless hours debugging edge cases
-- ✅ Weeks of security research
-- ✅ The frustration of vendor lock-in
-
-**Own the code. Deploy anywhere. Customize everything. Pay once.**
 
 ---
 
