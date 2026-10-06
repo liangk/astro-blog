@@ -6,7 +6,7 @@ author: "Ko-Hsin Liang"
 repo: "https://github.com/liangk/empirical-study"
 description: "I benchmarked five large-payload patterns (1KB–10MB) and scanned 277 public API repositories (300 in corpus, 23 failed) with a Babel AST detector. JSON.parse on a 10MB response takes 66.0ms median on Node.js 22. Pagination cuts parse cost by ~10x. In the wild, 179/277 repos (64.6%) had at least one large-payload anti-pattern: 52,010 total findings. Unbounded ORM fetches dominate (32,829). Deep nested includes account for another 17,069. Here’s the data and the fixes."
 excerpt: "A 10MB JSON response parses in ~66ms on my machine — long enough to blow past most API latency budgets before you even touch the data. I benchmarked the cost, then scanned 300 real API repos (277 successfully, 23 failed). 64.6% had at least one large payload anti-pattern."
-lastmod: "2026-05-12"
+lastmod: "2026-10-02"
 canonical_url: "https://stackinsight.dev/blog/large-payloads-empirical-study"
 twitter_card: "summary_large_image"
 twitter_site: "@stackinsightDev"
@@ -79,6 +79,8 @@ series_order: 2
 ---
 
 # A 10MB API Response Costs 66ms Before Your Code Even Runs.
+
+**Correction (2 October 2026):** The benchmarks in this article stand. The real-world scan does not. I re-ran it at the same commits and checked the findings: about 12.7% of the 52,010 were database calls at all. The rest were `Array.prototype.find`, lodash, test helpers and objects that happened to nest three levels deep. The published total also counted four repositories twice. The scan numbers below are left as published so the correction can be checked against them. What a rebuilt detector finds on the same corpus, and what one real unbounded endpoint costs, is in [I Re-Ran My Own Payload Scan](/blog/large-payloads-detection-story).
 
 Every backend developer has seen it: an endpoint that "works fine" in development, passes all tests, then collapses in production the day a customer with 50,000 records hits it.
 
